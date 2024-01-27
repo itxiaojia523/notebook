@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>踩坑 | 小贾的前端笔记</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="小贾的前端笔记">
+    
+    <link rel="preload" href="/notebook/assets/css/0.styles.583d0ac5.css" as="style"><link rel="preload" href="/notebook/assets/js/app.a4af80e3.js" as="script"><link rel="preload" href="/notebook/assets/js/3.cd0d221c.js" as="script"><link rel="preload" href="/notebook/assets/js/1.3b1cd4a9.js" as="script"><link rel="preload" href="/notebook/assets/js/14.ce49760b.js" as="script"><link rel="prefetch" href="/notebook/assets/js/10.52abbca9.js"><link rel="prefetch" href="/notebook/assets/js/11.5e7166c2.js"><link rel="prefetch" href="/notebook/assets/js/12.a53a7da1.js"><link rel="prefetch" href="/notebook/assets/js/13.d8f4f522.js"><link rel="prefetch" href="/notebook/assets/js/15.55318b2c.js"><link rel="prefetch" href="/notebook/assets/js/16.5b871032.js"><link rel="prefetch" href="/notebook/assets/js/17.f6a1bb99.js"><link rel="prefetch" href="/notebook/assets/js/18.072f3403.js"><link rel="prefetch" href="/notebook/assets/js/19.4ede7a5e.js"><link rel="prefetch" href="/notebook/assets/js/20.3fd3d766.js"><link rel="prefetch" href="/notebook/assets/js/21.b4bd38d9.js"><link rel="prefetch" href="/notebook/assets/js/22.d04a7528.js"><link rel="prefetch" href="/notebook/assets/js/23.e323cd05.js"><link rel="prefetch" href="/notebook/assets/js/24.e9873950.js"><link rel="prefetch" href="/notebook/assets/js/25.04cbafe3.js"><link rel="prefetch" href="/notebook/assets/js/26.2f2e24f7.js"><link rel="prefetch" href="/notebook/assets/js/27.3f379816.js"><link rel="prefetch" href="/notebook/assets/js/28.cbbc9fbc.js"><link rel="prefetch" href="/notebook/assets/js/29.6a90e826.js"><link rel="prefetch" href="/notebook/assets/js/30.3fc8936b.js"><link rel="prefetch" href="/notebook/assets/js/31.bd020d72.js"><link rel="prefetch" href="/notebook/assets/js/32.04519fc9.js"><link rel="prefetch" href="/notebook/assets/js/33.a49d79f7.js"><link rel="prefetch" href="/notebook/assets/js/34.f12beac4.js"><link rel="prefetch" href="/notebook/assets/js/35.b78d6e28.js"><link rel="prefetch" href="/notebook/assets/js/36.23fa6bfc.js"><link rel="prefetch" href="/notebook/assets/js/37.feddd8c3.js"><link rel="prefetch" href="/notebook/assets/js/38.5abe0093.js"><link rel="prefetch" href="/notebook/assets/js/39.d97da850.js"><link rel="prefetch" href="/notebook/assets/js/4.bd3236bb.js"><link rel="prefetch" href="/notebook/assets/js/40.1454a516.js"><link rel="prefetch" href="/notebook/assets/js/41.c58d9a95.js"><link rel="prefetch" href="/notebook/assets/js/42.d58ba369.js"><link rel="prefetch" href="/notebook/assets/js/43.e974402b.js"><link rel="prefetch" href="/notebook/assets/js/44.b0947cfa.js"><link rel="prefetch" href="/notebook/assets/js/45.ae019d13.js"><link rel="prefetch" href="/notebook/assets/js/46.c733bf95.js"><link rel="prefetch" href="/notebook/assets/js/47.c4daa0e2.js"><link rel="prefetch" href="/notebook/assets/js/48.f1e1b759.js"><link rel="prefetch" href="/notebook/assets/js/49.cb22050f.js"><link rel="prefetch" href="/notebook/assets/js/5.68d5ba89.js"><link rel="prefetch" href="/notebook/assets/js/50.d2a5cee4.js"><link rel="prefetch" href="/notebook/assets/js/51.db2cb444.js"><link rel="prefetch" href="/notebook/assets/js/52.1ee662ee.js"><link rel="prefetch" href="/notebook/assets/js/53.073dcc65.js"><link rel="prefetch" href="/notebook/assets/js/54.6bab7b7b.js"><link rel="prefetch" href="/notebook/assets/js/55.c95ed9b8.js"><link rel="prefetch" href="/notebook/assets/js/56.0a82a224.js"><link rel="prefetch" href="/notebook/assets/js/57.df77ef17.js"><link rel="prefetch" href="/notebook/assets/js/58.a24d90f5.js"><link rel="prefetch" href="/notebook/assets/js/59.73f3b6d7.js"><link rel="prefetch" href="/notebook/assets/js/6.a6f9ef00.js"><link rel="prefetch" href="/notebook/assets/js/60.ba1a8e7a.js"><link rel="prefetch" href="/notebook/assets/js/61.b56a3c90.js"><link rel="prefetch" href="/notebook/assets/js/62.76711a56.js"><link rel="prefetch" href="/notebook/assets/js/63.ffa04a7f.js"><link rel="prefetch" href="/notebook/assets/js/64.2c33c072.js"><link rel="prefetch" href="/notebook/assets/js/65.ae6dfb13.js"><link rel="prefetch" href="/notebook/assets/js/66.63e80af9.js"><link rel="prefetch" href="/notebook/assets/js/67.23780005.js"><link rel="prefetch" href="/notebook/assets/js/68.f1b4422f.js"><link rel="prefetch" href="/notebook/assets/js/69.19094eb3.js"><link rel="prefetch" href="/notebook/assets/js/7.6055b080.js"><link rel="prefetch" href="/notebook/assets/js/70.35b4e16d.js"><link rel="prefetch" href="/notebook/assets/js/71.1f8fd97e.js"><link rel="prefetch" href="/notebook/assets/js/72.cea694d2.js"><link rel="prefetch" href="/notebook/assets/js/73.5f7ce277.js"><link rel="prefetch" href="/notebook/assets/js/74.279ec00a.js"><link rel="prefetch" href="/notebook/assets/js/75.bddabbee.js"><link rel="prefetch" href="/notebook/assets/js/76.85adf61b.js"><link rel="prefetch" href="/notebook/assets/js/77.001a727c.js"><link rel="prefetch" href="/notebook/assets/js/78.0756fae8.js"><link rel="prefetch" href="/notebook/assets/js/79.e851573d.js"><link rel="prefetch" href="/notebook/assets/js/8.179b1ae3.js"><link rel="prefetch" href="/notebook/assets/js/80.b7ada7c9.js"><link rel="prefetch" href="/notebook/assets/js/81.793c4e62.js"><link rel="prefetch" href="/notebook/assets/js/82.ca7ebe8e.js"><link rel="prefetch" href="/notebook/assets/js/83.fe847cad.js"><link rel="prefetch" href="/notebook/assets/js/84.36739797.js"><link rel="prefetch" href="/notebook/assets/js/9.0238166d.js">
+    <link rel="stylesheet" href="/notebook/assets/css/0.styles.583d0ac5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>小贾的前端笔记</h3> <p class="description" data-v-59e6cb88>小贾的前端笔记</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/notebook/" class="home-link router-link-active"><!----> <span class="site-name">小贾的前端笔记</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/notebook/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      小贾的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/itxiaojia523" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/712139234359182/posts" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>46</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/notebook/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      小贾的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/itxiaojia523" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/712139234359182/posts" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/notebook/" class="sidebar-heading clickable router-link-active open"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/notebook/" aria-current="page" class="sidebar-link">学前必读</a></li><li><a href="/notebook/front/问题集.html" class="sidebar-link">问题集</a></li><li><a href="/notebook/front/面试题.html" class="sidebar-link">面试题</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/notebook/handbook/mynote" class="sidebar-heading clickable"><span>My Note</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/notebook/handbook/common/common" class="sidebar-heading clickable"><span>Common</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/notebook/front/front" class="sidebar-heading clickable"><span>前端学习</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/notebook/back/back" class="sidebar-heading clickable"><span>后端学习</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">踩坑</h1> <div data-v-8a445198><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h2 id="踩坑"><a href="#踩坑" class="header-anchor">#</a> 踩坑</h2> <div class="language- extra-class"><pre class="language-text"><code>祖先元素有transform的话，子元素fixed不会正确生效
+</code></pre></div><h2 id="dpi"><a href="#dpi" class="header-anchor">#</a> dpi</h2> <div class="language- extra-class"><pre class="language-text"><code>dpi:dot per inch 物理层面
+每英寸有几个像素点
+
+苹果公司解决方案
+160dpi的情况下1dp = 1px
+所以一张2*2 px的图
+在320dpi的情况下，占用了16px,但是显示大小相同
+</code></pre></div><h2 id="flex布局"><a href="#flex布局" class="header-anchor">#</a> flex布局</h2> <div class="language- extra-class"><pre class="language-text"><code>	容器：父元素
+	项目：子元素
+	
+	为父元素（容器）设置flex后，子元素（项目）的float clear vertical-align都失效
+容器常见属性
+	display：flex //flexible box的缩写 任何容器都可以指定（不区分块级和行内）
+	flex-direction:设置主轴方向 默认x轴为主轴，主轴方向→
+			row(默认x，→) 
+			//reverse控制主轴方向
+			row-reverse 
+			column（y，↓） column-reverse
+			元素跟着主轴排列
+	justify-content：设置主轴方向的富裕空间
+			默认flex-start从头部开始,center,space-around,space-between(两端贴边)	
+	flex-wrap：是否换行
+		默认不换行，如果超出，里面内容缩小 实现响应式
+	
+	align-items：侧轴上子元素的排列方式（单行）
+		默认stretch; flex-start;center！
+		stretch会把盒子拉的跟父元素一样高（用得少）
+	
+	align-content：侧轴上子元素的排列方式（多行）
+		flex-start,center,space-around,space-between
+	flex-flow：direction wrap 语法糖复合direction和wrap
+	flex-flow: row wrap;
+
+子项常见属性
+	flex 子项占的分数 flex1/(flex1+flex2...) （不要设置宽度	）
+	align-self 控制子项在侧轴的排列方式 
+		默认auto 值为父元素的align-items 如果没有父元素 默认stretch
+	order 默认0 值随意，根据order的值升序排列 
+	如果没有设置flex-basis 默认拿width 或 height
+	
+flex-shrink：收缩因子，默认1   注意单行才有收缩
+
+flex c2
+
+flex版本
+	1. display: box
+	2. 旧版flex
+	3. flex
+	
+容器：父元素
+display: flex;
+//控制主轴以及主轴方向
+flex-direction:水平row/垂直column -reverse（反向）
+justify-content: 控制主轴的富裕空间
+align-items：控制侧轴的富裕空间
+项目：子元素
+</code></pre></div><h2 id="居中"><a href="#居中" class="header-anchor">#</a> 居中</h2> <div class="language- extra-class"><pre class="language-text"><code>	1. 已知宽度水平居中
+	width: 100px
+	margin: 0 auto
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Title&lt;/title&gt;
+  &lt;style&gt;
+      .wrapper,.wrapperfix{
+          position: relative;
+          width: 100px;
+          height: 100px;
+          background-color: pink;
+          margin-bottom: 10px;
+      }
+      /*对于脱离文档流盒子，固定宽高*/
+      /*方案一： div绝对定位水平垂直居中【margin:auto实现绝对定位元素的居中】，*/
+      /*兼容性：,IE7及之前版本不支持*/
+      .inner1 {
+          position:absolute;
+          left:0;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          width: 50px;
+          height: 50px;
+          background: green;
+          margin: auto;
+      }
+      /*方案二：*/
+      /*div绝对定位水平垂直居中【margin 负间距】     这或许是当前最流行的使用方法。*/
+      .inner2{
+          position: absolute;
+          left:50%; /* 定位父级的50% */
+          top:50%;
+          width:50px;
+          height: 50px;
+          background:blue;
+          /*margin-left:-25px;*/
+          /*margin-top:-25px;*/
+          /*方案三：*/
+          /*div绝对定位水平垂直居中【Transforms 变形】*/
+          transform: translate(-50%,-50%); /*自己的50% */
+      }
+/*      方案四：*/
+/*      css不定宽高水平垂直居中*/
+/*      .box{*/
+/*          height:600px;*/
+/*          display:flex;*/
+/*          justify-content:center;*/
+/*          align-items:center;*/
+/*          !* aa只要三句话就可以实现不定宽高水平垂直居中。 *!*/
+/*      }*/
+/*      .box&gt;div{*/
+/*          background: green;*/
+/*          width: 200px;*/
+/*          height: 200px;*/
+/*      }*/
+/*      方案五：*/
+/*      将父盒子设置为table-cell元素，可以使用text-align:center和vertical-align:middle实现水平、垂直居中。比较完美的解决方案是利用三层结构模拟父子结构*/
+/*      &lt;p class=&quot;outerBox tableCell&quot;&gt;*/
+/*                                   &lt;/p&gt;&lt;p class=&quot;ok&quot;&gt;*/
+/*                                                    &lt;/p&gt;&lt;p class=&quot;innerBox&quot;&gt;tableCell&lt;/p&gt;*/
+/*                                                                                       &lt;p&gt;&lt;/p&gt;*/
+/*                                                                                            &lt;p&gt;&lt;/p&gt;*/
+
+
+
+
+/*         !**/
+/*         table-cell实现居中*/
+/*         将父盒子设置为table-cell元素，设置*/
+/*         text-align:center,vertical-align: middle;*/
+/*         子盒子设置为inline-block元素*/
+/*         *!*/
+/*      .tableCell{*/
+/*         display: table;*/
+/*      }*/
+/*      .tableCell .ok{*/
+/*          display: table-cell;*/
+/*          text-align: center;*/
+/*          vertical-align: middle;*/
+/*      }*/
+/*      .tableCell .innerBox{*/
+/*          display: inline-block;*/
+/*      }*/
+/*      方案六：*/
+/*      对子盒子实现绝对定位，利用calc计算位置*/
+/*&lt;p class=&quot;outerBox calc&quot;&gt;*/
+/*                              &lt;/p&gt;&lt;p class=&quot;innerBox&quot;&gt;calc&lt;/p&gt;*/
+/*                                                            &lt;p&gt;&lt;/p&gt;*/
+/*                                                                     !*绝对定位，clac计算位置*!*/
+/*                                                                 .calc{*/
+/*                                                                     position: relative;*/
+/*                                                                 }*/
+/*      .calc .innerBox{*/
+/*          position: absolute;*/
+/*          left:-webkit-calc((500px - 200px)/2);*/
+/*          top:-webkit-calc((120px - 50px)/2);*/
+/*          left:-moz-calc((500px - 200px)/2);*/
+/*          top:-moz-calc((120px - 50px)/2);*/
+/*          left:calc((500px - 200px)/2);*/
+/*          top:calc((120px - 50px)/2);*/
+/*      }*/
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;wrapper&quot;&gt;
+    &lt;div class=&quot;inner1&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;wrapper&quot;&gt;
+    &lt;div class=&quot;inner2&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;wrapper&quot;&gt;
+    &lt;div class=&quot;inner3&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre></div><h2 id="css基础"><a href="#css基础" class="header-anchor">#</a> css基础</h2> <div class="language- extra-class"><pre class="language-text"><code>样式表分类
+1.行内样式表 直接在标签里添加
+2.内部样式表 style
+3.外部样式表 link
+
+font-family 字体系列
+font-style 主要针对斜体
+font: font-style font-weight font-size/line-height font-family
+
+文本属性
+text-decoration:underline 下划线 line-through 删除线
+一般用于取消a的默认下划线
+text-indent 首行缩进1em = 一个font-size，继承
+line-height = height 实现居中；比盒子小，文字偏上
+
+</code></pre></div><h2 id="三种传统布局方式"><a href="#三种传统布局方式" class="header-anchor">#</a> 三种传统布局方式</h2> <div class="language- extra-class"><pre class="language-text"><code>1.普通流（标准流）：上下排列
+  标签按照默认方式排列 如：块级元素独占一行；行内元素按照顺序 从左到右 遇到父元素边缘自动换行
+2.浮动：：水平排列（浮动常和标准流配合排列）
+最主要特点
+1.脱离标准流
+2.不再保留原先的位置
+任何元素都可以浮动，添加后类似行内块元素
+如果行内元素浮动了，不需要转为块或行内块就可以直接给高度和宽度
+浮动后，大小由内容决定
+
+为了约束浮动元素位置
+1.采用标准流的父元素排列上下位置
+2.内部子元素浮动排列
+
+3.定位 ：自由移动或固定
+1.相对：主要作用当爹 子绝父相  不脱离文档流，还占坑
+2.绝对：默认视窗大小的初始..              脱离文档流
+3.固定：没啥用，一般有绝对模拟固定  与绝对的区别：随着视窗移动  
+定位到版心右侧：position left:50% margin-left:版心一半px
+
+定位的盒子才有 z-index：正负0，越大盒子越靠上
+一个盒子分两层（背景和文本），float半个盒子 定位提高一个盒子
+
+给行内元素设置高度：转换，浮动，定位
+块级元素设置定位:宽高默认内容大小
+脱离标准流：不会触发外边距合并
+浮动的元素不会压住下面标准流的文字，压住的是文字的盒子（文字环绕的效果）
+浮动产生的目的：文字环绕图片
+
+display :用于一个元素如何显示 block（块级之外，还有显示的意思） inline none(隐藏，位置也没了)
+visibility ：用于指定是否可见 visible hidden(继续占有原来位置)
+overflow : visible hidden scroll没超出也会出滚动条 auto 在需要的时候出现滚动条
+
+</code></pre></div><h2 id="清除浮动"><a href="#清除浮动" class="header-anchor">#</a> 清除浮动</h2> <div class="language- extra-class"><pre class="language-text"><code>why：因为父盒子在很多情况下不方便给高度，子盒子浮动了又不占有位置，最后父盒子高度为0，塌陷，影响到之后的标准流盒子
+clear 本质闭合浮动，将影响限制在父盒子范围内
+方法：
+1.额外标签法：隔墙法，在浮动元素末尾添加空块级标签，例如div style=clear:both div；缺点添加无意义标签，结构化差
+2.父级添加overflow：hidden auto scroll  外边距合并和清楚浮动，缺点无法显示溢出部分
+
+3.父级添加after伪类：额外标签法升级版 最优！！！！！！！！！！！！！！！！！！！！！！！！
+.clearfix:after{
+	content:&quot;&quot;
+	display:block/table table的话好像不用height0了
+	height:0
+	clear:both
+	visibility:hidden
+}
+.clearfix{
+	zoom:1
+}
+
+4.父级添加双伪元素:同3，但是前后门都关上 最优！！！！！！！！！！！！！！！！！！！！！！！！！！
+.clearfix:before,.clearfix:after{
+	content:&quot;&quot;
+	display：table
+}
+.clearfix:after{
+	clear:both
+}
+.clearfix{
+	zoom:1
+}
+
+</code></pre></div><h2 id="图片"><a href="#图片" class="header-anchor">#</a> 图片</h2> <div class="language- extra-class"><pre class="language-text"><code>图片格式
+1.jpg 高清，产品类
+2.gif 颜色少但可以保存透明背景和动画效果，图片小动画效果
+3.png 结合了gif和jpg，能保存透明背景，想要切成背景透明的图片！
+4.psd是ps的专用格式，存放了图层通道遮罩等多种设计稿
+
+精灵图/雪碧图spirites：为有效减少服务器接受和发送请求的次数，提高页面加载速度
+:主要针对背景图片
+多产品图片等 经常更换的图片不用、
+通过 background-position移动
+注意一般left top 图片往左上走是-的
+</code></pre></div><h2 id="css3新特性-ie9或移动"><a href="#css3新特性-ie9或移动" class="header-anchor">#</a> css3新特性 IE9或移动</h2> <div class="language- extra-class"><pre class="language-text"><code>https://juejin.cn/post/6844903486618861575
+css3新特性 IE9或移动
+新增选择器
+1.属性 注意：类和属性选择器权重都是10  div[class=&quot;&quot;] 权重是11！
+input[value]{} 表input中有value的  
+重点：[value=&quot;&quot;]  ^= 以...开头  $=以...结尾 *= 含有...
+
+
+2.结构伪类
+E:first-child 长子+E  
+
+nth-child(n) n可以是数字，关键字，公式，用于实现隔行变色等 even odd 奇偶
+公式从0开始计算，但是0或超出的部分，会被忽视
+li:ntn-child(n){} 只能写n，写n会选择所有 从0开始，忽视溢出 2n+1 2n n+5 -n+5 前五 n+5 5个开始往后
+
+E:first-of-type 第一个E
+
+div:nth-child（1） 会先找第一个孩子 再核对div
+div:nth-of-type（1） 先找div再找位置，，不管div位置，肯定是第一个div
+ 
+
+3.伪元素 权重同标签 1 ；在盒子上面加遮罩层 
+用于在需要往盒子里新添元素时使用，通过CSS模拟创建新的标签元素
+必须有content 属性	
+::before 在元素内部的前面插入内容，
+::after
+以前的:是CSS2的过时语法，用来支持IE8
+使用场景：
+1.字体图标
+P::before{
+	position:absolute
+	right xx
+	top   xx
+	content:“反斜杠e91e 字体编码” 就不需要font-family了
+	font-size xx
+}
+2.遮罩层
+.tudou::before{
+	content:&quot;&quot;;
+	display: none
+	position absolute
+	top 0
+	left 0 
+	width 100%
+	height 100%
+	background : rgba(0,0,0,.4) url() no-repeat center
+}
+.tudou:hover::before{
+	display none
+} 
+3.清楚浮动
+.clearfix:before,.clearfix:after{
+	content: '';
+	display: table 使得两个伪类在同行
+}
+.clearfix:after{
+	clear:both;
+}
+
+CSS3盒子模型
+box-sizing:content-box/border-box   建立的盒子可见内容是内容区/可见内容含边框  
+filter:blur(5px) 数值越大越模糊
+
+cal()函数
+width:cal(100% -80px);
+
+transition 过度 常与hover一起用
+transition: 过度的属性 时间 运动曲线 何时开始,过度属性2 时间 ... 多个属性可以利用,分开，或者all
+
+</code></pre></div><h2 id="css"><a href="#css" class="header-anchor">#</a> css</h2> <div class="language- extra-class"><pre class="language-text"><code>选择器
+	简单选择器	div  .class  #id 
+	复合选择器	交集选择器div.class
+1.后代 &amp;nbsp 2.子 &gt; 3.并集 , 4.伪类 :hover :first-child
+伪类
+1.链接伪类:给a使用 link(未访问) visited hover active(按下去还未弹起)  书序lvha注意！ 
+2.表单伪类 input:focus 选取获得焦点的表单元素
+3.结构伪类
+
+元素的显示模式
+如：div占一行；一行能放多个span
+分类：块元素和行内元素（内联） 特殊：行内块
+块元素：div  
+1.独占一行
+2.可以设宽高，内外边距 
+3.宽度默认100% 
+4.里面可放行内或块
+注意：
+1.文字类元素p，主要是放文字，不能放块元素 特别是div
+2.同理h1-h6
+
+行内元素：span
+1.一行可以显示多个
+2.设置宽高无效
+3.默认自身内容宽度
+4.只能容纳文本或其他行内
+注意：
+1.链接里不能再放链接
+2.特殊情况a可以放块级，但display:block 最安全
+
+行内块：img input td
+1.能放一行（行内），但之间会有空隙
+2.默认宽度内容宽（行内）
+3.宽高，内外边距，行高可控（块）
+
+background
+1.image 2.repreat 3.position 4.attachment(滚动/固定) 5.color(默认transparent)
+image 背景图片的位置在背景颜色上方
+logo或装饰性的小图片或超大的北京图片，优点是便于控制位置（精灵图）
+position:x,y   (top/center/bottom...px,只写一个表x,另一个默认center)
+background:颜色 地址 平铺 滚动 位置
+
+背景颜色半透明 rbga(255,255,255,.3)
+
+CSS三大特性
+1.层叠性：覆盖
+2.继承性：子承父
+可继承：text- font- line- color,...line-height 
+注意行高
+父:font-size:14px/1.5
+子：font: 12px  不写单位时候表父的size的1.5倍, 优点：子元素可以根据自身文字大小自动调整行高
+3.优先性
+权重
+继承或* 0,0,0,0
+元素    0,0,0,1
+类或伪类0,0,1,0
+ID 	0,1,0,0
+行内	1,0,0,0
+!important 
+注意：
+1.没有进位，权重叠加 ID &gt; 100+个类
+2.判断从左到右
+
+border:1px solid red 没有顺序要求
+1.width 2.style(solid dotted dashed) 3.color
+border-top
+
+border-collapse:collapse 解决表格边框合并问题
+
+border和padding会影响盒子大小，添加了border 如果不喜欢盒子大小变化，需修改width 和height
+
+padding:上 右 下 左 顺时针； 上 左右 下； 上下 左右
+padding:5px 4个边都有
+应用：导航条等，文字字数不一样多，可以不设置宽度，设置padding来实现居中
+
+width:100% 与auto的区别
+
+margin实现块级盒子水平居中
+1.width
+2.margin:0 auto
+使行内元素或行内块水平居中
+text-align：center
+
+垂直外边距合并
+1.相邻块元素；A上B下  A有100的下m B有200的上m 觉得应该是300的m 实际却只会有200的m，取大
+解决方法：1.尽量使用padding 2.只给一个盒子加margin
+2.嵌套块元素
+A父B子 A有50的mt 想要让B离A原点 200mt ；结果却是A和B依然重叠，且AB的mt都是200 取大
+1.为父定义上边框
+2.设置padding 原理同1 隔开两者，两者都会使得盒子变大
+3.overflow:hidden
+4.子浮动
+
+
+1.对于行内元素 尽量只设置左右的内外边距，上下无效
+
+去掉li的项目符号 原点
+list-style none
+
+如果是正方形 border-radius:50% 宽度和高度和 的一半
+原理是在四角画半径为r的圆
+圆角矩形设为高度的一半
+四个值：左上 顺时针
+分开表：border-top-left-radius
+
+盒子阴影：不会影响盒子大小，不占空间
+box-shadow: h v blur spread color inset/ouset(默认，别写，写了会失效)
+h-shadow 水平 允许负
+v-shadow 垂直 允许负
+
+文本阴影
+text-shadow：h v blur color 
+
+
+用户界面样式
+1.cursor 光标 default默认 pointer move十字架 test not-allowed
+2.去除表单INPUT默认边框 outline:0/none
+3.防止拖拽testarea文本域 resize:none
+
+实现行内块和文字垂直居中：vertical-align: baseline基线（小学文字书写栏四条线中的第三条） top middle bottom（第四条）
+图片底层空白缝隙：因为默认与文字基线对齐，所有会有缝隙 1.添加vertical-align（推荐） 2.转为块级
+
+单行文本省略号
+1.white-space:no-wrap 默认normal自动换行
+2.overflow:hidden
+3.text-overflow:ellipsis 超出部分...代替
+多行文本省略号：这种写法有较大兼容性问题 适合移动端或webkit浏览器
+1.overflow:hidden
+2.text-flow:ellopsis
+3.display:-webkit-box
+4.-webkit-line-clamp:2 限制文本的行数
+5.-webkit-box-orient:vertical 子元素的牌匾方式
+
+布局技巧
+1.margin负值，两个带边框盒子浮动，合并一起 浏览器的渲染过程，1.第一个盒子代码拉一边 2.再渲染第二个；不会出现说都添加了-1 平移
+float left margin -1px; 左边盒子的有边框 被右边盒子做边框压住了 1.添加相对定位 2.如果都有相对定位，再设置z-index
+
+2.文字围绕浮动元素
+
+3.行内块实现页码跳转
+
+用Unicode编码代替字体，可以有效避免浏览器解释CSS代码时出现乱码的问题
+黑体 9ED1 4F53
+宋体 5B8B 4F53
+微软雅黑 5FAE 8F6F 96C5 9ED1
+
+
+transform 转换，即变形，可以实现放大缩小，旋转，位移
+属性：
+1.translate(x,y)  translateX()=translate(x,0) 运用：鼠标经过图片，向上移动-5px
+重点：
+1.最大优点，不会影响到其他元素的位置
+2.百分比相对自身元素：用于水平垂直居中 translate(50%,50%)
+3.对行内无效
+
+2.rotate(Xdeg) 正顺时针，负逆时针
+
+3.transform-origin:x y 设置中心点 默认50% 50%（自身）
+4.transform: scale(x,y) // 1,1 表原先一倍大小（不变）
+用scale的优势：不会影响其他盒子，而且可以设置缩放中心点 
+
+2D转化综合写法：
+		transform:translate() rotate() scale()
+	注意：顺序影响效果；位移最前面
+
+动画animation
+	div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      /*调用动画*/
+      animation: move;
+      /*动画时长*/
+      animation-duration: 10s;
+    }
+    /*定义动画*/
+    @keyframes move {
+      /*每个百分比代表一个节点 0 * 10s = 0*/
+      0% {
+
+    }
+      /*25% * 10s = 4s*/
+      25% {
+        transform: translate(1000px,0);
+
+    }
+      50% {
+        transform: translate(1000px,400px);
+      }
+      75%{
+        transform: translate(0,400px);
+      }
+      100%{
+        transform: translate(0,0);
+      }
+    }
+
+常见属性
+	animation-timing-function //运动曲线 liner 匀速
+	animation-iteration-count //重复次数 默认1，还有infinite
+	animation-direction //逆向播放 alternate  会再← ！
+	animation-fill-mode //规定动画结束后状态，默认回到起始backwards  保持结束状态forwards ！
+	animation-play-state // 暂停或运行
+
+动画简写
+	animation: name duration 运动曲线 delay 次数 反向 状态
+注意：简写不包含暂停，一般配合事件
+	animation-play-state //运行或停止 
+
+运动曲线：steps 步长 表时间函数中间隔数量，分几步完成动画
+	打字机效果
+	div {
+      overflow: hidden;
+      font-size: 20px;
+      white-space: nowrap;
+      width: 0;
+      height: 30px;
+      background-color: pink;
+      animation: w 4s steps(10) forwards;
+    }
+    @keyframes w {
+      0% {
+
+      }
+      100%{
+        width: 200px;
+      }
+    }
+
+3D转化
+	特点：近大远小；物体后面不可见
+	Y轴 向下为+ ！
+	Z轴 垂直屏幕，往外为+
+
+	translate3d(x,y,z) //位移
+	transform:translateZ(100px) //一般都是用px精确单位，不同xy，得借助透视才看得到效果，物体离屏幕的距离，越大，成像越大
+	用于旋转木马，给父一个固定的视距，设置子的Z
+	rotate3d(x,y,z)//旋转
+	perspective //透视 也成为视距，即眼睛到屏幕距离，越小，成像越大
+	注意：透视写在父级上
+	transform-style //呈现
+
+浏览器的私有前缀
+	-moz- //火狐
+	ms	//ie
+	webkit //谷歌 评估
+	o //Opera
+提倡写法
+	-moz-border-radius: 10px
+	-webkit-border-radius: 10px
+	-o-border-radius: 10px
+	border-radius: 10px
+
+背景线性渐变(注意浏览器私有前缀)
+	background-image: linear-gradient(180deg,#fa5956,#fb8650);
+	background: -webkit-linear-gradient(起始方向,颜色1,颜色2，...);
+
+</code></pre></div><h2 id="浏览器默认样式"><a href="#浏览器默认样式" class="header-anchor">#</a> 浏览器默认样式</h2> <div class="language- extra-class"><pre class="language-text"><code>通常情况下，浏览器会为元素设置默认样式
+一般要去除默认样式
+</code></pre></div><h2 id="选择器"><a href="#选择器" class="header-anchor">#</a> 选择器</h2> <div class="language- extra-class"><pre class="language-text"><code>https://juejin.cn/post/6844904137742614542
+CSS选择器分类
+1.id选择器 (#id)
+2.类选择器 (.classname)
+
+3.元素选择器 又称标签选择器
+
+4.通配符选择器 (*)
+
+来自 &lt;https://juejin.cn/post/6844904137742614542&gt; 
+
+5.属性选择器
+    [title]{
+      
+    }
+[attribute=value] 用于选取带有指定属性和值的元素
+
+  &lt;a href=&quot;&quot; title=&quot;value&quot;&gt;&lt;/a&gt;
+
+    a[title= value]{
+      
+    }
+[attribute~=value] 用于选取属性值中包含指定词汇的元素
+
+[attribute|=value] 用于选取带有以指定值开头的属性值的元素，该值必须是整个单词
+
+[attribute^=value] 匹配属性值以指定值开头的每个元素
+
+[attribute$=value] 匹配属性值以指定值结尾的每个元素
+
+[attribute*=value] 匹配属性值中包含指定值的每个元素
+
+6.群组选择器 (A，B)
+
+7.后代选择器，又称包含选择器 (A B)
+8.子选择器 (A&gt;B)
+
+9.相邻兄弟选择器 (A+B) 表示选中A的下一个相邻元素
+
+10.相邻兄弟选择器衍生(A~B)
+表示选中A后的N个相邻元素
+
+11.伪类选择器
+用来选择处于特定状态下的元素
+• :first-child：匹配元素下的第一个元素
+• :last-child：匹配元素下的最后一个元素
+• :nth-child()：匹配元素下的第n个元素，(2n+1)代表基数，(2n)代表偶数
+
+• :first-of-type：匹配元素下的每一个标签类型的第一个
+• :last-of-type：匹配元素下的每一个标签类型的最后一个
+• :nth-of-type(n)：匹配元素下的每一个标签类型的第n个
+
+
+• :link：未访问链接
+• :visited：已访问链接
+• :hover：鼠标放置上的链接
+• :active：被激活时的状态
+使用顺序： :link&gt;:visited&gt;:hover&gt;:active love hate (lvha)
+
+• :focus： 选中被激活的表单元素
+
+• :checked：选中被勾选的表单元素
+• :disabled：选中被禁用的表单元素
+• :root：选中根节点
+• :target：定位当前活动页面内定位点的目标元素
+• :not(xx)：选中不为xx的元素
+
+12.伪元素选择器
+
+可用于定位文档中包含的文本，与伪类进行区分，伪元素使用双冒号(::)定义
+
+• ::before、::after：使用content属性生成额外的内容并插入在标记当中
+• ::first-line：匹配文本首行
+• ::first-letter：匹配文本首字母
+• ::selection：匹配突出显示的文字
+
+权重计算规则
+	• 第一等：代表内联样式，如: style=””，权值为1000。
+	• 第二等：代表ID选择器，如：#content，权值为0100。
+	• 第三等：代表类，伪类和属性选择器，如.content，权值为0010。
+	• 第四等：代表类型选择器和伪元素选择器，如div p，权值为0001。
+	• 通配符、子选择器、相邻选择器等的。如*、&gt;、+,权值为0000。
+继承的样式没有权值。
+</code></pre></div><h2 id="rem和em"><a href="#rem和em" class="header-anchor">#</a> rem和em</h2> <h2 id="文档流和盒子模型"><a href="#文档流和盒子模型" class="header-anchor">#</a> 文档流和盒子模型</h2> <div class="language- extra-class"><pre class="language-text"><code>文档流 normal flow
+	-网页是一个多层结构
+	-用户只能看到最上层
+	-最底层称为文档流，是网页的基础
+	-元素默认在文档流中排列
+	
+visibility: hidden 隐藏但依然占位置
+元素类型display：table  / none隐藏元素 不占位置
+	在文档流
+		-块元素
+			独占一行，垂直排列
+			默认宽度父元素全部宽度，默认高度被内容撑满
+		-行内元素
+			自身大小，从左到右水平排列
+		-行内块元素：可设置宽高 又不会独占一行 
+			-2个行内块元素会有缝隙，相当于有空格
+			&lt;a …display:inline-block&gt;
+			&lt;a …display:inline-block&gt;
+	不在文档流
+
+盒子模型
+块元素：
+	内容区(content): width height
+	内边距(padding)
+	边框(border):边框宽度，边框颜色，边框样式  1px solid red
+	外边距(margin)
+	
+	一个元素在父元素内，水平布局必须满足以下等式
+	margin-left + border-left + padding-left + width + pading-right + border-right +margin-right = 父元素宽度
+		如果以上值没有auto，默认按margin-right来调整
+	三个能设置auto ： width margin-left margin-right
+	width 默认auto 才会显得是100%
+	
+已知width 水平居中 margin: 0 auto
+
+垂直方向布局
+	如果子元素超过父元素高度，默认溢出 overflow: hidden / scroll 出现两条滚动条 /auto根据需求生成滚动条
+
+行内元素的盒子模型
+	不支持width height,设置padding,border,margin不会影响页面布局
+
+//设置盒子尺寸计算方式（width和height作用）
+box-sizing: content-box(默认)
+		：border-box //此时 width = content + border
+
+
+</code></pre></div><p><img src="/docs/handbook/assets/imgs/boxModule.png" alt="Alt text" title="optional title"></p> <h2 id="垂直外边距重叠"><a href="#垂直外边距重叠" class="header-anchor">#</a> 垂直外边距重叠</h2> <div class="language- extra-class"><pre class="language-text"><code>相邻的垂直方向外边距会发送重叠，水平不会
+兄弟元素：不需要处理
+	box1{ margin-bottom: 100px} box2{ margin-top: 100px}
+	结果只有100px，同正负，取绝对值大， 如果一正一负，取和
+
+父子元素：
+	outer{} inner{margin-top: 100px} 会带着父元素一起下移
+	这时候，子元素的上外边距 和 父元素的上外边距重叠
+	子元素的外边距会传递给父元素，主要考虑上外边距
+	解决:
+		注意如果有border隔离，不会合并
+</code></pre></div><p><img src="/docs/handbook/assets/imgs/css1.png" alt="Alt text" title="optional title"></p> <h2 id="轮廓阴影和圆角"><a href="#轮廓阴影和圆角" class="header-anchor">#</a> 轮廓阴影和圆角</h2> <div class="language- extra-class"><pre class="language-text"><code>设置元素轮廓
+	outline
+	类似border，但不会影响布局，只会影响显示
+
+设置阴影
+	box-shadow: black
+	此时不会有效果，因为正处于盒子的正下方
+	box-shadow: 10px 10px  10px rgba(0,0,0,.3)
+			x偏移量 y偏移量 阴影模糊半径：越大越模糊
+			
+圆角
+	border-top-left-radius: 50px 100px
+				x方向半径 y方向半径
+				
+	border-radius：顺时针 左上 开始
+border-radus: 50% 圆形
+</code></pre></div><h2 id="浮动"><a href="#浮动" class="header-anchor">#</a> 浮动</h2> <div class="language- extra-class"><pre class="language-text"><code>高度塌陷问题：
+	父元素height默认被子元素撑开
+	子元素脱离文档流，父元素没人撑开，导致height丢失
+	下面元素会自动上移，布局错乱
+
+BFC:block formatting context 块级模式化环境
+	是css隐藏属性，可以为一个元素开启BFC,开起后，该元素会变成一个独立的布局区域
+	
+	开启BFC后元素特点：
+		1.不会被浮动元素覆盖
+		2.垂直外边距不会重叠
+		3.可以包裹住浮动子元素
+	如何开启
+		1.float：left
+		2.display:inline-block
+		3.overflow: 非visible hidden 
+4.
+</code></pre></div><h2 id="css默认值-继承-百分比"><a href="#css默认值-继承-百分比" class="header-anchor">#</a> CSS默认值，继承，百分比</h2> <h2 id="移动端布局"><a href="#移动端布局" class="header-anchor">#</a> 移动端布局</h2> <div class="language- extra-class"><pre class="language-text"><code>单独制作移动端页面
+	流式布局（移动web开发常见）
+		给%宽；通常搭配max-width 和min-width
+	flex 弹性布局（推荐）
+	less+rem+媒体查询
+	混合布局
+
+响应式页面兼容移动端
+	媒体查询
+	bootstrap
+
+
+圣杯布局	
+	div	
+	div flex:1 //表将剩余空间当做1份 全部给2号盒子
+	div
+
+rem布局特点
+	1.文字也随着屏幕变化
+	2.流式和flex主要是针对宽度布局，rem高度也可以变化
+
+rem是root em是一个相对单位，基准是html元素的字体大小
+	em是父元素字体大小
+ex.根元素（html）设置字体12px,非元元素设置width=2em;换成24px
+	！通过修改html的文字大小，总体控制其他元素文字大小
+
+媒体查询Media Query:针对不同屏幕尺寸，设置不同样式
+	语法：
+	@media 类型 and/not/only (媒体特性) {
+	    css code
+	}
+@media screen and (max-width: 800px) { //表当浏览器尺寸小于等于800px时，生效
+    body {
+        background-color: pink;
+    }
+}
+@media screen and (max-width: 499px) { //注意顺序从小到大或从大到小，小于等于499肯定也小于等于800
+    body {
+        background-color: yellow;
+    }
+}
+
+引入资源：针对不同的媒体查询引入不同的css文件，直接在link里进行媒体查询
+
+LESS：CSS的扩展语言，也成为CSS预处理器，常见的预处理器有Sass,Less,Stylus
+	CSS缺点：CSS是非程序性语言，没有变量，函数，作用域等概念
+	代码复用率低，不方便维护，没有计算能力
+Less变量
+	@变量名:值； //申明变量并赋值
+
+Less编译
+
+Less嵌套
+	1.子元素样式直接写在父元素内
+	2.如果遇到伪类，交集，伪元素时，添加&amp;符号，如果直接写在内部，会编译为：a :hover 会有空格，当后代选择器看待了
+	&amp;:hover 编译为 a:hover
+
+Less运算
+	除法时，最好加括号 （50 / 40rem）
+	注意：	运算符左右空格
+		单位只有一个的话，就以此为准
+		如果有两个不一样的单位，以第一个为准
+实际开发适配方案
+	第一步：根据设计稿与设备宽度的比例，动态计算并设置html根标签的font-size大小
+	第二步：设计稿元素的宽高和相对位置等取值，换算为rem
+技术方案1（主流）：less + 媒体查询 +rem
+技术方案2（推荐）：flexible.js + rem //有js更简单，现在不建议用flexible了，而是用vw vh方案
+		原理是设备划分10份，只需要确定好html文字大小，其余JS处理
+
+慕课插件！！
+</code></pre></div><h2 id="平面转化transform属性"><a href="#平面转化transform属性" class="header-anchor">#</a> 平面转化transform属性</h2> <div class="language- extra-class"><pre class="language-text"><code>实现：元素位移，旋转，缩放的2D效果
+transform一般搭配transtion使用
+值：方位名词 right left center top bottom
+translate(水平距离，垂直距离)  %取自身 用于居中
+rotate(360deg)
+origin 改变旋转点，默认中心点 跟transition写一起
+</code></pre></div><h2 id="background-size"><a href="#background-size" class="header-anchor">#</a> background-size</h2> <div class="language- extra-class"><pre class="language-text"><code>cover
+缩放背景图片以完全覆盖背景区，可能背景图片部分看不见。和 contain 值相反，cover 值尽可能大的缩放背景图像并保持图像的宽高比例（图像不会被压扁）。该背景图以它的全部宽或者高覆盖所在容器。当容器和背景图大小不同时，背景图的 左/右 或者 上/下 部分会被裁剪。
+contain
+缩放背景图片以完全装入背景区，可能背景区部分空白。contain 尽可能的缩放背景并保持图像的宽高比例（图像不会被压缩）。该背景图会填充所在的容器。当背景图和容器的大小的不同时，容器的空白区域（上/下或者左/右）会显示由 background-color 设置的背景颜色。
+</code></pre></div><h2 id="网页效果"><a href="#网页效果" class="header-anchor">#</a> 网页效果</h2> <div class="language- extra-class"><pre class="language-text"><code>元素便宜了offset,动态获取元素的位置和大小
+	1.元素距离父元素的距离（父需有定位）
+	element.offsetTop/Left
+	2.获取元素自身宽高（返回值不带单位）
+	element.offsetWidth/Height，包括padding border 内容
+	3.获取父元素（定位）
+	element.offsetParent //带定位的老子
+	element.parentNode //亲爸爸
+
+offset和style的区别：获取用offset 更改用style
+style
+	1.只能获取到行内样式表的值（带单位）
+	2.width 不包含 padding和border
+	3.可赋值
+
+案例：获取鼠标在盒子里的坐标
+	1.鼠标在页面的坐标 e.pageX
+	2.盒子距离页面的距离
+	3.1-2:鼠标在盒子里的坐标
+
+鼠标移动事件
+	mousemove
+
+	var box = document.querySelector('.box')
+	box.addEventListener('mousemove',function(e){
+		var x = e.pageX - this.offsetLeft
+		var y = e.pageY - this.offsetTop
+		this.innerHTML = 'x的坐标是'+ x +'y的坐标是'+ y
+	})
+
+案例：拖动模拟框
+	1.点击登录后，弹出登录框，同时显示大的灰色背景
+	2.登录框可以拖动
+
+	var login = document.querySelector('.login')
+    var mask = document.querySelector('.login_bg')
+    var link = document.querySelector('#link')
+    var closeBtn = document.querySelector('#closeBtn')
+    link.addEventListener('click',function (){
+      mask.style.display = 'block'
+      login.style.display = 'block'
+    })
+    closeBtn.addEventListener('click',function (){
+      mask.style.display = 'none'
+      login.style.display = 'none'
+    })
+    //鼠标拖拽：按下，移动，弹起
+    //盒子位置：鼠标坐标-鼠标盒子内坐标
+    var title = document.querySelector('#title')
+    title.addEventListener('mousedown',function (e){
+      //获取鼠标在盒子内坐标
+      var x = e.pageX - login.offsetLeft
+      var y = e.pageY - login.offsetTop
+      document.addEventListener('mousemove',move)
+      function move(e){
+        login.style.left = e.pageX - x + &quot;px&quot;
+        login.style.top = e.pageY - y + &quot;px&quot;
+      }
+      //鼠标弹起，移除移动事件
+      document.addEventListener('mouseup',function (){
+        document.removeEventListener('mousemove',move)
+      })
+    })
+
+案例：模仿京东放大镜
+
+</code></pre></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/notebook/front/basic/html.html" class="prev">
+          HTML
+        </a></span> <span class="next"><a href="/notebook/front/basic/javascript/basic/type_and_operator.html">
+          DataType_and_operator
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#踩坑" class="sidebar-link reco-side-踩坑" data-v-b57cc07c>踩坑</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#dpi" class="sidebar-link reco-side-dpi" data-v-b57cc07c>dpi</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#flex布局" class="sidebar-link reco-side-flex布局" data-v-b57cc07c>flex布局</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#居中" class="sidebar-link reco-side-居中" data-v-b57cc07c>居中</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#css基础" class="sidebar-link reco-side-css基础" data-v-b57cc07c>css基础</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#三种传统布局方式" class="sidebar-link reco-side-三种传统布局方式" data-v-b57cc07c>三种传统布局方式</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#清除浮动" class="sidebar-link reco-side-清除浮动" data-v-b57cc07c>清除浮动</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#图片" class="sidebar-link reco-side-图片" data-v-b57cc07c>图片</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#css3新特性-ie9或移动" class="sidebar-link reco-side-css3新特性-ie9或移动" data-v-b57cc07c>css3新特性 IE9或移动</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#css" class="sidebar-link reco-side-css" data-v-b57cc07c>css</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#浏览器默认样式" class="sidebar-link reco-side-浏览器默认样式" data-v-b57cc07c>浏览器默认样式</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#选择器" class="sidebar-link reco-side-选择器" data-v-b57cc07c>选择器</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#rem和em" class="sidebar-link reco-side-rem和em" data-v-b57cc07c>rem和em</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#文档流和盒子模型" class="sidebar-link reco-side-文档流和盒子模型" data-v-b57cc07c>文档流和盒子模型</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#垂直外边距重叠" class="sidebar-link reco-side-垂直外边距重叠" data-v-b57cc07c>垂直外边距重叠</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#轮廓阴影和圆角" class="sidebar-link reco-side-轮廓阴影和圆角" data-v-b57cc07c>轮廓阴影和圆角</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#浮动" class="sidebar-link reco-side-浮动" data-v-b57cc07c>浮动</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#css默认值-继承-百分比" class="sidebar-link reco-side-css默认值-继承-百分比" data-v-b57cc07c>CSS默认值，继承，百分比</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#移动端布局" class="sidebar-link reco-side-移动端布局" data-v-b57cc07c>移动端布局</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#平面转化transform属性" class="sidebar-link reco-side-平面转化transform属性" data-v-b57cc07c>平面转化transform属性</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#background-size" class="sidebar-link reco-side-background-size" data-v-b57cc07c>background-size</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/css.html#网页效果" class="sidebar-link reco-side-网页效果" data-v-b57cc07c>网页效果</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/notebook/assets/js/app.a4af80e3.js" defer></script><script src="/notebook/assets/js/3.cd0d221c.js" defer></script><script src="/notebook/assets/js/1.3b1cd4a9.js" defer></script><script src="/notebook/assets/js/14.ce49760b.js" defer></script>
+  </body>
+</html>

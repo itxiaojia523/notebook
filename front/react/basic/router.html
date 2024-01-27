@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>React路由 | 小贾的前端笔记</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="小贾的前端笔记">
+    
+    <link rel="preload" href="/notebook/assets/css/0.styles.583d0ac5.css" as="style"><link rel="preload" href="/notebook/assets/js/app.a4af80e3.js" as="script"><link rel="preload" href="/notebook/assets/js/3.cd0d221c.js" as="script"><link rel="preload" href="/notebook/assets/js/1.3b1cd4a9.js" as="script"><link rel="preload" href="/notebook/assets/js/62.76711a56.js" as="script"><link rel="prefetch" href="/notebook/assets/js/10.52abbca9.js"><link rel="prefetch" href="/notebook/assets/js/11.5e7166c2.js"><link rel="prefetch" href="/notebook/assets/js/12.a53a7da1.js"><link rel="prefetch" href="/notebook/assets/js/13.d8f4f522.js"><link rel="prefetch" href="/notebook/assets/js/14.ce49760b.js"><link rel="prefetch" href="/notebook/assets/js/15.55318b2c.js"><link rel="prefetch" href="/notebook/assets/js/16.5b871032.js"><link rel="prefetch" href="/notebook/assets/js/17.f6a1bb99.js"><link rel="prefetch" href="/notebook/assets/js/18.072f3403.js"><link rel="prefetch" href="/notebook/assets/js/19.4ede7a5e.js"><link rel="prefetch" href="/notebook/assets/js/20.3fd3d766.js"><link rel="prefetch" href="/notebook/assets/js/21.b4bd38d9.js"><link rel="prefetch" href="/notebook/assets/js/22.d04a7528.js"><link rel="prefetch" href="/notebook/assets/js/23.e323cd05.js"><link rel="prefetch" href="/notebook/assets/js/24.e9873950.js"><link rel="prefetch" href="/notebook/assets/js/25.04cbafe3.js"><link rel="prefetch" href="/notebook/assets/js/26.2f2e24f7.js"><link rel="prefetch" href="/notebook/assets/js/27.3f379816.js"><link rel="prefetch" href="/notebook/assets/js/28.cbbc9fbc.js"><link rel="prefetch" href="/notebook/assets/js/29.6a90e826.js"><link rel="prefetch" href="/notebook/assets/js/30.3fc8936b.js"><link rel="prefetch" href="/notebook/assets/js/31.bd020d72.js"><link rel="prefetch" href="/notebook/assets/js/32.04519fc9.js"><link rel="prefetch" href="/notebook/assets/js/33.a49d79f7.js"><link rel="prefetch" href="/notebook/assets/js/34.f12beac4.js"><link rel="prefetch" href="/notebook/assets/js/35.b78d6e28.js"><link rel="prefetch" href="/notebook/assets/js/36.23fa6bfc.js"><link rel="prefetch" href="/notebook/assets/js/37.feddd8c3.js"><link rel="prefetch" href="/notebook/assets/js/38.5abe0093.js"><link rel="prefetch" href="/notebook/assets/js/39.d97da850.js"><link rel="prefetch" href="/notebook/assets/js/4.bd3236bb.js"><link rel="prefetch" href="/notebook/assets/js/40.1454a516.js"><link rel="prefetch" href="/notebook/assets/js/41.c58d9a95.js"><link rel="prefetch" href="/notebook/assets/js/42.d58ba369.js"><link rel="prefetch" href="/notebook/assets/js/43.e974402b.js"><link rel="prefetch" href="/notebook/assets/js/44.b0947cfa.js"><link rel="prefetch" href="/notebook/assets/js/45.ae019d13.js"><link rel="prefetch" href="/notebook/assets/js/46.c733bf95.js"><link rel="prefetch" href="/notebook/assets/js/47.c4daa0e2.js"><link rel="prefetch" href="/notebook/assets/js/48.f1e1b759.js"><link rel="prefetch" href="/notebook/assets/js/49.cb22050f.js"><link rel="prefetch" href="/notebook/assets/js/5.68d5ba89.js"><link rel="prefetch" href="/notebook/assets/js/50.d2a5cee4.js"><link rel="prefetch" href="/notebook/assets/js/51.db2cb444.js"><link rel="prefetch" href="/notebook/assets/js/52.1ee662ee.js"><link rel="prefetch" href="/notebook/assets/js/53.073dcc65.js"><link rel="prefetch" href="/notebook/assets/js/54.6bab7b7b.js"><link rel="prefetch" href="/notebook/assets/js/55.c95ed9b8.js"><link rel="prefetch" href="/notebook/assets/js/56.0a82a224.js"><link rel="prefetch" href="/notebook/assets/js/57.df77ef17.js"><link rel="prefetch" href="/notebook/assets/js/58.a24d90f5.js"><link rel="prefetch" href="/notebook/assets/js/59.73f3b6d7.js"><link rel="prefetch" href="/notebook/assets/js/6.a6f9ef00.js"><link rel="prefetch" href="/notebook/assets/js/60.ba1a8e7a.js"><link rel="prefetch" href="/notebook/assets/js/61.b56a3c90.js"><link rel="prefetch" href="/notebook/assets/js/63.ffa04a7f.js"><link rel="prefetch" href="/notebook/assets/js/64.2c33c072.js"><link rel="prefetch" href="/notebook/assets/js/65.ae6dfb13.js"><link rel="prefetch" href="/notebook/assets/js/66.63e80af9.js"><link rel="prefetch" href="/notebook/assets/js/67.23780005.js"><link rel="prefetch" href="/notebook/assets/js/68.f1b4422f.js"><link rel="prefetch" href="/notebook/assets/js/69.19094eb3.js"><link rel="prefetch" href="/notebook/assets/js/7.6055b080.js"><link rel="prefetch" href="/notebook/assets/js/70.35b4e16d.js"><link rel="prefetch" href="/notebook/assets/js/71.1f8fd97e.js"><link rel="prefetch" href="/notebook/assets/js/72.cea694d2.js"><link rel="prefetch" href="/notebook/assets/js/73.5f7ce277.js"><link rel="prefetch" href="/notebook/assets/js/74.279ec00a.js"><link rel="prefetch" href="/notebook/assets/js/75.bddabbee.js"><link rel="prefetch" href="/notebook/assets/js/76.85adf61b.js"><link rel="prefetch" href="/notebook/assets/js/77.001a727c.js"><link rel="prefetch" href="/notebook/assets/js/78.0756fae8.js"><link rel="prefetch" href="/notebook/assets/js/79.e851573d.js"><link rel="prefetch" href="/notebook/assets/js/8.179b1ae3.js"><link rel="prefetch" href="/notebook/assets/js/80.b7ada7c9.js"><link rel="prefetch" href="/notebook/assets/js/81.793c4e62.js"><link rel="prefetch" href="/notebook/assets/js/82.ca7ebe8e.js"><link rel="prefetch" href="/notebook/assets/js/83.fe847cad.js"><link rel="prefetch" href="/notebook/assets/js/84.36739797.js"><link rel="prefetch" href="/notebook/assets/js/9.0238166d.js">
+    <link rel="stylesheet" href="/notebook/assets/css/0.styles.583d0ac5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>小贾的前端笔记</h3> <p class="description" data-v-59e6cb88>小贾的前端笔记</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/notebook/" class="home-link router-link-active"><!----> <span class="site-name">小贾的前端笔记</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/notebook/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      小贾的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/itxiaojia523" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/712139234359182/posts" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>46</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/notebook/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      小贾的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/itxiaojia523" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/712139234359182/posts" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/notebook/" class="sidebar-heading clickable router-link-active open"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/notebook/" aria-current="page" class="sidebar-link">学前必读</a></li><li><a href="/notebook/front/问题集.html" class="sidebar-link">问题集</a></li><li><a href="/notebook/front/面试题.html" class="sidebar-link">面试题</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/notebook/handbook/mynote" class="sidebar-heading clickable"><span>My Note</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/notebook/handbook/common/common" class="sidebar-heading clickable"><span>Common</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/notebook/front/front" class="sidebar-heading clickable"><span>前端学习</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/notebook/back/back" class="sidebar-heading clickable"><span>后端学习</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">React路由</h1> <div data-v-8a445198><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="react路由"><a href="#react路由" class="header-anchor">#</a> React路由</h1> <h2 id="spa理解"><a href="#spa理解" class="header-anchor">#</a> SPA理解</h2> <div class="language- extra-class"><pre class="language-text"><code>SPA：single page application
+单页Web应用
+1. 整个应用只有一个页面
+2. 点击页面的链接，不会刷新页面，只会做局部更新
+3. 数据通过ajax请求获取，并在前端异步展示
+</code></pre></div><h2 id="路由的理解"><a href="#路由的理解" class="header-anchor">#</a> 路由的理解</h2> <div class="language- extra-class"><pre class="language-text"><code>一个路由就是一个映射关系key-value
+key作为路径，value可能是function或component
+</code></pre></div><h2 id="前端路由和后端路由"><a href="#前端路由和后端路由" class="header-anchor">#</a> 前端路由和后端路由</h2> <div class="language- extra-class"><pre class="language-text"><code>前端路由：
+1. 浏览器路由 value是component 用于内容展示
+2. 注册路由&lt;Route path=&quot;/test&quot; component={Test}&gt;
+3. 流程
+点击test链接按钮，url变成 xxx/test, 监控到url的变化，展示Test组件
+
+路由根据浏览器BOM的history
+
+history是栈结构
+
+replace直接把栈顶的替换了
+
+let history = History.createBrowserHistory() //方法1：直接使用H5推出的history的api
+let history = History.createHashHistory() //方法2 hash值 锚点
+
+后端路由：
+1. value是function，用来处理前端提交的请求
+2. 注册路由 router.get(path,function(req,res))
+3. 流程
+当node接到一个请求时，根据url找到匹配的路由，调用回调
+</code></pre></div><h2 id="使用路由-v5"><a href="#使用路由-v5" class="header-anchor">#</a> 使用路由 v5</h2> <div class="language- extra-class"><pre class="language-text"><code>1. 需要额外下包
+npm i react-router-dom
+
+2. 内置组件
+&lt;BrowserRouter&gt;
+&lt;HashRouter&gt;
+&lt;Route&gt; // v6 render 或 component 改为 element
+&lt;Redirect&gt;
+&lt;Link&gt;
+&lt;Navlink&gt;
+&lt;Switch&gt; // v6中已被移除，新增&lt;Routes&gt;
+
+history对象
+match对象
+withRouter对象
+
+//在React中靠路由链接实现组件切换
+&lt;BrowserRouter&gt;
+    &lt;Link to=&quot;/about&quot;&gt;About&lt;/Link&gt;
+    &lt;Link to=&quot;/home&quot;&gt;Home&lt;/Link&gt;
+&lt;/BrowserRouter&gt;
+//以上代码通过link标签，修改url,但目前页面不会更新
+
+//注册路由
+//通过Route注册路由，注册完后，可以监听到url变化，从而更新组件
+&lt;BrowserRouter&gt;
+    &lt;Route path=&quot;/about&quot; component={About}&gt;&lt;/Route&gt;
+    &lt;Route path=&quot;/home&quot; component={Home}&gt;&lt;/Route&gt;
+    //v6中 
+    &lt;Route path=&quot;/home&quot; element={&lt;Home /&gt;}&gt;&lt;/Route&gt;
+&lt;/BrowserRouter&gt;
+
+整个App只需要一个&lt;BrowserRouter&gt;
+
+ReactDOM.render(
+    &lt;BrowserRouter&gt;
+        &lt;App/&gt;
+    &lt;/BrowserRouter&gt;
+)
+
+路由组件收到的props里有
+history
+match
+location
+
+&lt;Navlink&gt; 等同 &lt;Link&gt;
+什么时候使用：当需要动态追加类名时
+注意bootstrp的样式权重高，自己的样式需要提高权重
+
+.xiaojia{
+    background-color:orange !important
+    color:white !important
+}
+ex.
+&lt;Navlink activeClassName=&quot;xiaojia&quot; to=&quot;/about&quot;&gt;About&lt;/Navlink&gt;
+
+&lt;Switch&gt; 单一匹配
+不添加的话，home能匹配到 2个，Home Test两个组件都将被渲染
+&lt;Switch&gt;
+    &lt;Route path=&quot;/about&quot; component={About}&gt;&lt;/Route&gt;
+    &lt;Route path=&quot;/home&quot; component={Home}&gt;&lt;/Route&gt;
+    &lt;Route path=&quot;/home&quot; component={Test}&gt;&lt;/Route&gt;
+    //都匹配不上，走redirect，去about
+    &lt;Redirect to=&quot;/about&quot; /&gt;
+&lt;/Switch&gt;
+
+//v6
+&lt;Routes&gt;
+    &lt;Route path=&quot;/home&quot; element={&lt;Test /&gt;}&gt;&lt;/Route&gt;
+    &lt;Route path=&quot;/home&quot; element={&lt;Home /&gt;}&gt;&lt;/Route&gt;
+&lt;/Routes&gt;
+
+模糊匹配和严格匹配
+严格匹配不要用，能不用就不用,多级路由可能会出问题，有需要再开 
+默认：exact是false
+
+
+&lt;Route exact={true} path=&quot;/about&quot; component={About}&gt;&lt;/Route&gt;
+&lt;Route exact path=&quot;/about&quot; component={About}&gt;&lt;/Route&gt; // ={true} 可以省略
+
+默认是模糊匹配
+&lt;Link to=&quot;/home/a/b&quot;&gt;Home&lt;/Link&gt;
+&lt;Route path=&quot;/home&quot; component={Home}&gt;&lt;/Route&gt;
+
+link是home/a/b 只要route里有home就能匹配上
+
+路由嵌套
+路由匹配顺序：
+先匹配 先注册的路由，顺序往里
+&lt;Link to=&quot;/home/news&quot;&gt;News&lt;/Link&gt;
+&lt;Route path=&quot;/home/news&quot; component={News}&gt;&lt;/Route&gt;
+
+v6
+// 路由嵌套
+&lt;Route path=&quot;users&quot; element={&lt;Users /&gt;}&gt;
+     &lt;Route path=&quot;me&quot; element={&lt;OwnUserProfile /&gt;} /&gt;
+     &lt;Route path=&quot;:id&quot; element={&lt;UserProfile /&gt;} /&gt; 
+&lt;/Route&gt;
+显示 OwnUserProfile 组件的话通过 /users/me
+
+编程式路由导航
+withRouter使得普通组件也能使用路由的api
+export default withRouter(Header)
+借助this.props.history对象上的API对操作路由跳转，前进，后退
+this.props.history 
+push()
+replace()
+goBack()
+goForward()
+go()
+
+路由组件传参
+params传参
+search传参
+state传参
+
+</code></pre></div><ol start="2"><li>outlet显示子组件，如果没有outlet不会显示</li></ol> <h2 id="最佳实践"><a href="#最佳实践" class="header-anchor">#</a> 最佳实践</h2> <div class="language- extra-class"><pre class="language-text"><code>1. 单独管理路由router.tsx
+
+import {lazy, Suspense} from 'react'  //懒加载
+import App from &quot;App&quot;;
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Loading from 'components/Loading';
+// app 和 缓存ui 不需要懒加载
+// lazy(callback) callback中使用return import('Login')
+
+interface Iroute {
+    path: string,
+    component: React.FC,
+    children?: Iroute[]
+}
+const routerArr: Iroute[] = [
+    {path: '/', component: App, children:[
+        // 子路由可以不加/
+        {path: 'list', component: lazy(()=&gt; import('pages/List'))},
+        // 不加/*  edit/1 跳转不过来
+        {path: 'edit', component: lazy(()=&gt; import('pages/Edit'))},
+        {path: 'edit/:id', component: lazy(()=&gt; import('pages/Edit'))},
+        {path: 'means', component: lazy(()=&gt; import('pages/Means'))},
+        {path: 'namelist', component: lazy(()=&gt; import('pages/NameList'))},
+    ]},
+    {path: '/login', component: lazy(()=&gt; import('Login'))},
+    {path: '/register', component: lazy(()=&gt; import('Register'))},
+]
+
+const MyRouter = ()=&gt;(
+    &lt;BrowserRouter basename='/cms_manage/'&gt;
+    {/* 注意位置在Routes外，必须要fallback属性：当在渲染时，使用loading组件 */}
+        &lt;Suspense fallback={&lt;Loading/&gt;}&gt;
+            &lt;Routes&gt;
+                {
+                    routerArr.map((item,index)=&gt;(
+                        item.children ?
+                        // 如果有子路由 一般就2级，最多3级 再套一层就是了
+                        &lt;Route key={index} path={item.path} element={&lt;item.component/&gt;}&gt;
+                            {
+                                item.children.map((item,index)=&gt;(
+                                    &lt;Route key={index} path={item.path} element={&lt;item.component/&gt;}&gt;&lt;/Route&gt;
+                                ))
+                            }
+                        &lt;/Route&gt;
+                        :
+                        // 没有子路由
+                        &lt;Route key={index} path={item.path} element={&lt;item.component/&gt;}&gt;&lt;/Route&gt;
+                    ))
+                }
+           
+            &lt;/Routes&gt;     
+        &lt;/Suspense&gt;
+    &lt;/BrowserRouter&gt;
+)
+export default MyRouter;
+
+2.使用时，只需要在对应位置，使用
+&lt;Outlet /&gt;
+
+3.在index.ts中
+import MyRouter from 'router';
+ReactDOM.render(
+    &lt;Provider store={store}&gt;
+        &lt;MyRouter /&gt;
+    &lt;/Provider&gt;,
+    document.getElementById('root')
+)
+</code></pre></div><h2 id="react-router-v6-新特性"><a href="#react-router-v6-新特性" class="header-anchor">#</a> React-Router v6 新特性</h2> <p>https://juejin.cn/post/7033313711947251743</p> <div class="language- extra-class"><pre class="language-text"><code>React Router 有以下三个不同的包放在npm上
+
+1. react-router: 路由的核心库，提供很多组件和狗子
+
+2. react-router-dom:包括react-router所有，并添加一些专门用于DOM的组件，比如&lt;BrowserRouter&gt;
+
+3.react-router-native 包括react-router所有内容，并添加一些专门为ReactNative的API 如&lt;NativeRouter&gt;
+
+新增多个hook
+useParams 返回当前参数，根据url读取参数
+useNavigate 代替useHistory
+useMatch 
+useOutlet 返回根据路由生成的element
+useLocation 返回location对象
+useRoutes 同Routers组件
+useSearchParams 用于匹配URL中?后面的搜索参数
+
+{* path是相对的，可以省略/  同时/表当前路径 *}
+https://juejin.cn/post/7025418839454122015#heading-6  重点
+
+{* 默认exact *}
+
+{*  v6 Route 的 children 是用于嵌套路由,
+嵌套的 parent route 的 path 不用加*
+非嵌套的，分散在子组件的话，要加/* *}
+
+</code></pre></div><h2 id="v6"><a href="#v6" class="header-anchor">#</a> v6</h2> <div class="language- extra-class"><pre class="language-text"><code>function App() {
+  return (
+    &lt;div className=&quot;App&quot;&gt;
+        //注册一级路由
+      &lt;BrowserRouter&gt;
+        {/* switch 单一匹配 被Routes代替  路由写法改变*/}
+        &lt;Routes&gt;
+          &lt;Route path='/login' element={&lt;Login/&gt;}&gt; &lt;/Route&gt;
+            //路由嵌套时 写在admin中注册子路由要+/*
+          &lt;Route path='//*' element={&lt;Admin/&gt;}&gt; &lt;/Route&gt;
+            // 重定向 用*表找不到的路径
+          &lt;Route path=&quot;*&quot; element={&lt;Admin /&gt;} /&gt;
+        &lt;/Routes&gt;
+      &lt;/BrowserRouter&gt;
+    &lt;/div&gt;
+  );
+}
+
+//  在Admin中注册二级路由
+                        &lt;Routes&gt;
+						index 即表示是否是主路由，不能有 children
+						//此时 /admin 会自动显示Home组件   虽然我的是/
+						&lt;Route index element={&lt;Home /&gt;} /&gt;
+                            &lt;Route path='home' element={&lt;Home/&gt;}&gt;&lt;/Route&gt;
+                            &lt;Route path='product/*' element={&lt;Product/&gt;}&gt;&lt;/Route&gt;  
+						//重定向注意加/*
+                             &lt;Route path=&quot;/*&quot; element={&lt;Home /&gt;} /&gt;            
+                        &lt;/Routes&gt;
+//在product中注册三级路由
+        &lt;Routes&gt;
+            {/* 注意不要写成/product/detail */}
+            &lt;Route path='/detail' element={&lt;ProductDetail/&gt;}&gt; &lt;/Route&gt;
+            &lt;Route path='addupdate' element={&lt;ProductAddUpdate/&gt;}&gt; &lt;/Route&gt;
+            {/* /在这里表 /product路径 */}
+            &lt;Route path='/' element={&lt;ProductHome/&gt;}&gt; &lt;/Route&gt;
+			//重定向注意加/*
+            &lt;Route path=&quot;/*&quot; element={&lt;ProductHome /&gt;} /&gt;
+        &lt;/Routes&gt;
+
+
+
+     
+</code></pre></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/notebook/front/react/basic/simple_example.html" class="prev">
+          Simple_example
+        </a></span> <span class="next"><a href="/notebook/front/react/basic/summary.html">
+          Summary
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/notebook/front/react/basic/router.html#spa理解" class="sidebar-link reco-side-spa理解" data-v-b57cc07c>SPA理解</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/react/basic/router.html#路由的理解" class="sidebar-link reco-side-路由的理解" data-v-b57cc07c>路由的理解</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/react/basic/router.html#前端路由和后端路由" class="sidebar-link reco-side-前端路由和后端路由" data-v-b57cc07c>前端路由和后端路由</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/react/basic/router.html#使用路由-v5" class="sidebar-link reco-side-使用路由-v5" data-v-b57cc07c>使用路由 v5</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/react/basic/router.html#最佳实践" class="sidebar-link reco-side-最佳实践" data-v-b57cc07c>最佳实践</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/react/basic/router.html#react-router-v6-新特性" class="sidebar-link reco-side-react-router-v6-新特性" data-v-b57cc07c>React-Router v6 新特性</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/react/basic/router.html#v6" class="sidebar-link reco-side-v6" data-v-b57cc07c>v6</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/notebook/assets/js/app.a4af80e3.js" defer></script><script src="/notebook/assets/js/3.cd0d221c.js" defer></script><script src="/notebook/assets/js/1.3b1cd4a9.js" defer></script><script src="/notebook/assets/js/62.76711a56.js" defer></script>
+  </body>
+</html>

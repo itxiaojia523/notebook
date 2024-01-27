@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>小贾的前端笔记</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="小贾的前端笔记">
+    
+    <link rel="preload" href="/notebook/assets/css/0.styles.583d0ac5.css" as="style"><link rel="preload" href="/notebook/assets/js/app.a4af80e3.js" as="script"><link rel="preload" href="/notebook/assets/js/3.cd0d221c.js" as="script"><link rel="preload" href="/notebook/assets/js/1.3b1cd4a9.js" as="script"><link rel="preload" href="/notebook/assets/js/29.6a90e826.js" as="script"><link rel="prefetch" href="/notebook/assets/js/10.52abbca9.js"><link rel="prefetch" href="/notebook/assets/js/11.5e7166c2.js"><link rel="prefetch" href="/notebook/assets/js/12.a53a7da1.js"><link rel="prefetch" href="/notebook/assets/js/13.d8f4f522.js"><link rel="prefetch" href="/notebook/assets/js/14.ce49760b.js"><link rel="prefetch" href="/notebook/assets/js/15.55318b2c.js"><link rel="prefetch" href="/notebook/assets/js/16.5b871032.js"><link rel="prefetch" href="/notebook/assets/js/17.f6a1bb99.js"><link rel="prefetch" href="/notebook/assets/js/18.072f3403.js"><link rel="prefetch" href="/notebook/assets/js/19.4ede7a5e.js"><link rel="prefetch" href="/notebook/assets/js/20.3fd3d766.js"><link rel="prefetch" href="/notebook/assets/js/21.b4bd38d9.js"><link rel="prefetch" href="/notebook/assets/js/22.d04a7528.js"><link rel="prefetch" href="/notebook/assets/js/23.e323cd05.js"><link rel="prefetch" href="/notebook/assets/js/24.e9873950.js"><link rel="prefetch" href="/notebook/assets/js/25.04cbafe3.js"><link rel="prefetch" href="/notebook/assets/js/26.2f2e24f7.js"><link rel="prefetch" href="/notebook/assets/js/27.3f379816.js"><link rel="prefetch" href="/notebook/assets/js/28.cbbc9fbc.js"><link rel="prefetch" href="/notebook/assets/js/30.3fc8936b.js"><link rel="prefetch" href="/notebook/assets/js/31.bd020d72.js"><link rel="prefetch" href="/notebook/assets/js/32.04519fc9.js"><link rel="prefetch" href="/notebook/assets/js/33.a49d79f7.js"><link rel="prefetch" href="/notebook/assets/js/34.f12beac4.js"><link rel="prefetch" href="/notebook/assets/js/35.b78d6e28.js"><link rel="prefetch" href="/notebook/assets/js/36.23fa6bfc.js"><link rel="prefetch" href="/notebook/assets/js/37.feddd8c3.js"><link rel="prefetch" href="/notebook/assets/js/38.5abe0093.js"><link rel="prefetch" href="/notebook/assets/js/39.d97da850.js"><link rel="prefetch" href="/notebook/assets/js/4.bd3236bb.js"><link rel="prefetch" href="/notebook/assets/js/40.1454a516.js"><link rel="prefetch" href="/notebook/assets/js/41.c58d9a95.js"><link rel="prefetch" href="/notebook/assets/js/42.d58ba369.js"><link rel="prefetch" href="/notebook/assets/js/43.e974402b.js"><link rel="prefetch" href="/notebook/assets/js/44.b0947cfa.js"><link rel="prefetch" href="/notebook/assets/js/45.ae019d13.js"><link rel="prefetch" href="/notebook/assets/js/46.c733bf95.js"><link rel="prefetch" href="/notebook/assets/js/47.c4daa0e2.js"><link rel="prefetch" href="/notebook/assets/js/48.f1e1b759.js"><link rel="prefetch" href="/notebook/assets/js/49.cb22050f.js"><link rel="prefetch" href="/notebook/assets/js/5.68d5ba89.js"><link rel="prefetch" href="/notebook/assets/js/50.d2a5cee4.js"><link rel="prefetch" href="/notebook/assets/js/51.db2cb444.js"><link rel="prefetch" href="/notebook/assets/js/52.1ee662ee.js"><link rel="prefetch" href="/notebook/assets/js/53.073dcc65.js"><link rel="prefetch" href="/notebook/assets/js/54.6bab7b7b.js"><link rel="prefetch" href="/notebook/assets/js/55.c95ed9b8.js"><link rel="prefetch" href="/notebook/assets/js/56.0a82a224.js"><link rel="prefetch" href="/notebook/assets/js/57.df77ef17.js"><link rel="prefetch" href="/notebook/assets/js/58.a24d90f5.js"><link rel="prefetch" href="/notebook/assets/js/59.73f3b6d7.js"><link rel="prefetch" href="/notebook/assets/js/6.a6f9ef00.js"><link rel="prefetch" href="/notebook/assets/js/60.ba1a8e7a.js"><link rel="prefetch" href="/notebook/assets/js/61.b56a3c90.js"><link rel="prefetch" href="/notebook/assets/js/62.76711a56.js"><link rel="prefetch" href="/notebook/assets/js/63.ffa04a7f.js"><link rel="prefetch" href="/notebook/assets/js/64.2c33c072.js"><link rel="prefetch" href="/notebook/assets/js/65.ae6dfb13.js"><link rel="prefetch" href="/notebook/assets/js/66.63e80af9.js"><link rel="prefetch" href="/notebook/assets/js/67.23780005.js"><link rel="prefetch" href="/notebook/assets/js/68.f1b4422f.js"><link rel="prefetch" href="/notebook/assets/js/69.19094eb3.js"><link rel="prefetch" href="/notebook/assets/js/7.6055b080.js"><link rel="prefetch" href="/notebook/assets/js/70.35b4e16d.js"><link rel="prefetch" href="/notebook/assets/js/71.1f8fd97e.js"><link rel="prefetch" href="/notebook/assets/js/72.cea694d2.js"><link rel="prefetch" href="/notebook/assets/js/73.5f7ce277.js"><link rel="prefetch" href="/notebook/assets/js/74.279ec00a.js"><link rel="prefetch" href="/notebook/assets/js/75.bddabbee.js"><link rel="prefetch" href="/notebook/assets/js/76.85adf61b.js"><link rel="prefetch" href="/notebook/assets/js/77.001a727c.js"><link rel="prefetch" href="/notebook/assets/js/78.0756fae8.js"><link rel="prefetch" href="/notebook/assets/js/79.e851573d.js"><link rel="prefetch" href="/notebook/assets/js/8.179b1ae3.js"><link rel="prefetch" href="/notebook/assets/js/80.b7ada7c9.js"><link rel="prefetch" href="/notebook/assets/js/81.793c4e62.js"><link rel="prefetch" href="/notebook/assets/js/82.ca7ebe8e.js"><link rel="prefetch" href="/notebook/assets/js/83.fe847cad.js"><link rel="prefetch" href="/notebook/assets/js/84.36739797.js"><link rel="prefetch" href="/notebook/assets/js/9.0238166d.js">
+    <link rel="stylesheet" href="/notebook/assets/css/0.styles.583d0ac5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>小贾的前端笔记</h3> <p class="description" data-v-59e6cb88>小贾的前端笔记</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/notebook/" class="home-link router-link-active"><!----> <span class="site-name">小贾的前端笔记</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/notebook/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      小贾的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/itxiaojia523" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/712139234359182/posts" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>46</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/notebook/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      小贾的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/itxiaojia523" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/712139234359182/posts" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/notebook/" class="sidebar-heading clickable router-link-active open"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/notebook/" aria-current="page" class="sidebar-link">学前必读</a></li><li><a href="/notebook/front/问题集.html" class="sidebar-link">问题集</a></li><li><a href="/notebook/front/面试题.html" class="sidebar-link">面试题</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/notebook/handbook/mynote" class="sidebar-heading clickable"><span>My Note</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/notebook/handbook/common/common" class="sidebar-heading clickable"><span>Common</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/notebook/front/front" class="sidebar-heading clickable"><span>前端学习</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/notebook/back/back" class="sidebar-heading clickable"><span>后端学习</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title"></h1> <div data-v-8a445198><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><div class="language- extra-class"><pre class="language-text"><code>ECMA:european computer manufacturers association
+ECMAScript 是根绝ECMA-262标准的脚本程序设计语言
+接口请求函数模块
+// 包含所有接口请求函数模块
+// 1.同一暴露
+// export default{
+//     xxx(){},
+//     yyy(){}
+// }
+import ajax from './ajax'
+// 2.分别暴露 以req开头，方便
+// 登录
+export function reqLogin(username,password){
+    return ajax('/api/user/login',{name:username,password},&quot;POST&quot;)
+}
+// 添加用户
+export const reqAddUser = (user)=&gt; ajax('/api/user/add',user,&quot;POST&quot;)
+
+兼容性查看
+kangax.github.io/compat-table/es6
+
+1.
+let申明变量：可以批量申明并赋值
+！不能重复申明
+
+2.块级作用域 全局 函数 eval
+3.不存在变量提升
+4.不影响作用链 //不能由外向内找，作用域是由内向外，所以没关系
+
+申明常量const
+1.一定要赋初始值
+2.一般用大小
+3.值不能修改
+4.堆数组和对象的元素的修改，不会报错，因为地址没变
+
+解构赋值
+	从数组和对象中提取值，堆变量进行赋值
+	const F4 = ['1','2','3','4']
+	let [yi,er,san,si] = F4
+	console.log(yi) //1
+
+从对象提取值 
+注意：变量名=属性名
+  const zhao = {
+    name: 'caocao'
+  }
+  let {name} = zhao
+  console.log(name)
+
+新的声明字符串方式 反引号`` //tab上面
+	内容中可以直接换行 之前需要'++'来连接
+	直接拼接
+let love = `毛毛`
+let out = `${love}是我的最爱`
+
+简化对象的写法
+	允许直接在大括号里直接写入变量，作为属性和方法
+	  let name = 'mao'
+  let setName = function (name){
+    this.name = name
+  }
+  const maomao = {
+    name,
+    setName,
+    jump(){
+      console.log(`我能跳`)
+    }
+  }
+
+允许使用箭头来定义函数
+	箭头 =&gt;
+	let fn = () =&gt;{}
+箭头函数特性
+	this是静态的，指向函数声明时所在作用域下的this
+	不能作为构造函数
+	不能使用arguments
+	箭头函数的简写
+	1.省略小括号，当形参只有一个时
+	2.省略花括号，当代码体只有一句时，return也得省略
+		返回值：为执行结果
+
+
+filter()函数
+const arr = [1,3,4,5,6]
+const result = arr.filter(function(){
+	if(item % 2 ===0 ){
+	return ture
+	}else{
+	return false	
+}
+})		
+console.log(result) // 4 6
+或
+const result = arr.filter(items =&gt; item % 2 === 0)
+
+箭头函数适用于
+	1.与this无关的回调，定时器，数组的方法问题
+	2.不适用与this有关的事件回调；对象的方法
+
+允许给形参赋初始值
+具有默认值的参数，一般放后
+
+与解构赋值组合
+	
+	connect({
+	host: 'localhost',
+	username&quot; 'root',
+	})
+function connect(options){
+	let host = options.host; //每次都写options麻烦
+	let username = options.username 	
+}
+改为
+function connect(host = '127.0.0.1',username,password,port){
+		
+}
+
+引入rest参数用于代替arguements
+	作为参数时，要放最后
+
+	function fn(a,b,...args){
+	console.log(a)
+	console.log(args)	
+	}
+	fn(1,2,3,4,5)// a是1 b是2 args是[3,4,5]
+
+扩展运算符 ...
+
+	能将数组转为逗号分割的 参数序列
+
+const tf = ['毛','毛毛','毛毛毛']
+  function test(){
+    console.log(arguments)
+  }
+  test(tf)//0: (3) [&quot;毛&quot;, &quot;毛毛&quot;, &quot;毛毛毛&quot;]
+  test(...tf)//0: &quot;毛&quot; 1: &quot;毛毛&quot; 2: &quot;毛毛毛&quot;
+
+	应用1：数组的合并
+  const tf = ['毛']
+  const kz = ['小','小小']
+  //合并数组tf和kz
+  const hebing = [...tf, ...kz]
+  console.log(hebing)//0: &quot;毛&quot; 1: &quot;小&quot; 2: &quot;小小&quot;
+
+	应用2：数据的克隆 //浅拷贝，如果是地址值，指向同一对象
+  const kz = ['小','小小']
+  const  kelong = [...kz]
+  console.log(kelong)//0: &quot;小&quot; 1: &quot;小小&quot;
+
+	应用3：将伪数组转为真正的数组
+  const divs = document.querySelectorAll('div')
+  console.log(divs)//nodelist里的proto是obj
+  const divArr = [...divs]
+  console.log(divArr) //0: div1: div
+
+新的原始数据类型symbol:表独一无二，类似字符串，值唯一，命名不会冲突
+	不能与其他类型进行运算
+	定义的对象属性不能用for in遍历
+	用reflect.ownKeys获取所有键名
+
+  //创建symbol
+  let s1 = Symbol('毛'); //可以空，或者描述字符串，即注释
+  let s2 = Symbol('毛毛');
+  console.log(s1 === s2) //false
+  //创建symbol对象
+  let s3 = Symbol.for('毛毛');
+  let s4 = Symbol.for('毛毛')
+  console.log(s3 === s4) //true
+
+	应用1：给对象添加属性或方法
+  //想给game对象添加up down相关的方法，但是直接添加up或down可能有命名冲突
+  let game = {
+    up: function () {
+      console.log('我是game的属性up')
+    },
+    //添加方式2
+    [Symbol('down相关')]: function () {
+      console.log('down')
+    }
+  }
+  let methods = {
+    up: Symbol('up相关'),
+    down: Symbol()
+  };
+  //添加方式1
+  game[methods.up] = function () {
+    console.log('我是新来的up')
+  };
+  console.log(game) //up: ƒ () Symbol(down相关): ƒ () Symbol(up相关): ƒ ()
+
+symbol的内置值：symbol的属性
+	ex.Symbol.hasInstance 整体作为对象的属性
+
+  class Person{
+    static [Symbol.hasInstance](param){ //添加symbol.hasinstance 属性
+      console.log(param) //参数是调用instanceof 的对象
+      console.log('我被用于检测了，返回true吧')
+      return true
+    }
+  }
+  let o = {}
+  console.log(o instanceof Person)
+
+
+  const arr1 = [1,2]
+  const arr2 = [3,4]
+  console.log(arr1.concat(arr2)) // 1,2,3,4
+  arr2[Symbol.isConcatSpreadable] = false //不可展开，不可分开，只能作为整体
+  console.log(arr1.concat(arr2)) // [1,2,[3,4]]
+
+
+</code></pre></div><h2 id="import-and-export"><a href="#import-and-export" class="header-anchor">#</a> import and export</h2> <div class="language- extra-class"><pre class="language-text"><code>export 分别暴露
+1. export const App = ()=&gt;{}
+import {App} from xxx
+
+export default分别暴露
+2. export default App
+import App from xxx
+
+</code></pre></div><h2 id="promise"><a href="#promise" class="header-anchor">#</a> Promise</h2> <div class="language- extra-class"><pre class="language-text"><code>Promise是ES6 引入的异步编程的新解决方案。
+
+语法上Promise是一个构造函数
+conse p = new Promise(
+)
+
+接收一个函数作为参数，回调
+返回一个Promise
+  可以使用Promise的方法
+	1. promise的then方法
+	2. promise的catch方法
+
+ex.
+const p = new Promise( function(){
+	setTimeout(function(){
+		//发送请求
+		let data = &quot;&quot;
+		let err = &quot;数据读取失败&quot;
+		if(data 不为空…){
+			resolve(data)//resolve表成功
+		}else{
+			reject(err)//表失败
+		}
+	},1000)
+})
+
+//then方法可以接受两个函数作为参数
+第一个表成功时调用，第二个表失败时调用
+p.then(function(value){
+	console.log(value) //value = data resolve传过来的
+	},function(reason){
+	console.error(reason) // reason=err reject传来的
+})
+
+用catch可以只设置失败的情况
+封装时，可以同一catch 一次性处理err
+p.catch(function(reason){
+  console.log(reason)
+})
+
+
+</code></pre></div><h2 id="解构赋值"><a href="#解构赋值" class="header-anchor">#</a> 解构赋值</h2> <div class="language- extra-class"><pre class="language-text"><code> // 解构赋值：从数组或对象中提取值，并赋值给变量
+        // 1.数组解构 []
+        let [a,b,c,d] = [1,2,3]; //注意 值有顺序对应关系
+        // console.log(a,b,c,d); 1 2 3 undefined 结构不到undefined
+        // 交换变量
+        let x = 1
+        let y = 2
+        x++
+        y++
+        [x,y] = [y,x]
+        //  let 声明的变量直到定义的代码被执行时才会初始化。在变量初始化前访问变量会导致 ReferenceError
+        console.log(x,y);
+        // 2.对象解构{}，变量必须有属性同名
+        let {foo , bar} = {foo:'tom', bar : 'mary'}
+        console.log(foo,bar);
+
+</code></pre></div><h2 id="模板字符串"><a href="#模板字符串" class="header-anchor">#</a> 模板字符串``</h2> <div class="language- extra-class"><pre class="language-text"><code>1.内容中可以出现换行符
+let str = `&lt;ul&gt;
+          &lt;li&gt;TOM&lt;/li&gt;
+          &lt;/ul&gt;`
+
+2.拼接字符串 
+${} 取值
+let out = `${value}是我认为最搞笑的演员！`
+</code></pre></div><h2 id="对象的简写"><a href="#对象的简写" class="header-anchor">#</a> 对象的简写</h2> <div class="language- extra-class"><pre class="language-text"><code>const school = {
+  name:name,
+  change:change,
+  improve:function(){
+    console.log(&quot;improves&quot;)
+  }
+}
+
+简写为：
+const school ={
+  name, //key和value 名字相同
+  school,
+  improve(){
+    console.log(&quot;improve&quot;)
+  }
+}
+</code></pre></div><h2 id="async-await"><a href="#async-await" class="header-anchor">#</a> async await</h2> <div class="language- extra-class"><pre class="language-text"><code>async 关键字为你提供了一种更简单的方法来处理基于异步 Promise 的代码。在一个函数的开头添加 async，就可以使其成为一个异步函数。
+
+async function myFunction() {
+  // 这是一个异步函数
+}
+
+在异步函数中，你可以在调用一个返回 Promise 的函数之前使用 await 关键字。这使得代码在该点上等待，直到 Promise 被完成，这时 Promise 的响应被当作返回值，或者被拒绝的响应被作为错误抛出。
+
+async function fetchProducts() {
+  try {
+    // 在这一行之后，我们的函数将等待 `fetch()` 调用完成
+    // 调用 `fetch()` 将返回一个“响应”或抛出一个错误
+    const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+    if (!response.ok) {
+      throw new Error(`HTTP 请求错误：${response.status}`);
+    }
+    // 在这一行之后，我们的函数将等待 `response.json()` 的调用完成
+    // `response.json()` 调用将返回 JSON 对象或抛出一个错误
+    const json = await response.json();
+    console.log(json[0].name);
+  }
+  catch(error) {
+    console.error(`无法获取产品列表：${error}`);
+  }
+}
+fetchProducts();
+
+这里我们调用 await fetch()，我们的调用者得到的并不是 Promise，而是一个完整的 Response 对象，就好像 fetch() 是一个同步函数一样。
+我们甚至可以使用 try...catch 块来处理错误，就像我们在写同步代码时一样。
+但请注意，这个写法只在异步函数中起作用。异步函数总是返回一个 Pomise
+
+所以你不能做这样的事情：
+
+async function fetchProducts() {
+  try {
+    const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+    if (!response.ok) {
+      throw new Error(`HTTP 请求错误：${response.status}`);
+    }
+    const json = await response.json();
+    return json;
+  }
+  catch(error) {
+    console.error(`无法获取产品列表：${error}`);
+  }
+}
+const json = fetchProducts();
+console.log(json[0].name);   // json 是一个 Promise 对象，因此这句代码无法正常工作
+
+相反，你需要做一些事情，比如：
+
+async function fetchProducts() {
+  try {
+    const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+    if (!response.ok) {
+      throw new Error(`HTTP 请求错误：${response.status}`);
+    }
+    const json = await response.json();
+    return json;
+  }
+  catch(error) {
+    console.error(`无法获取产品列表：${error}`);
+  }
+}
+const jsonPromise = fetchProducts();
+jsonPromise.then((json) =&gt; console.log(json[0].name));
+
+</code></pre></div><h2 id="类中的this"><a href="#类中的this" class="header-anchor">#</a> 类中的this</h2> <div class="language- extra-class"><pre class="language-text"><code>    //constructor里的this指向实例对象
+    //方法里的this指向调用者
+</code></pre></div><h2 id="let-和-const"><a href="#let-和-const" class="header-anchor">#</a> let 和 const</h2> <div class="language- extra-class"><pre class="language-text"><code>1.变量不能重复命名
+2.块级作用域 （es5：全局 局部 eval(严格模式)）
+3.不存在变量提升
+4.不影响作用域链
+
+const 申明常量
+1.一定要赋初始值
+2.一般大写SCHOOL
+3.常量的值不能改
+4.块级作用域
+5.对数组和对象的元素修改，不算对常量的修改（地址值）
+</code></pre></div><h2 id="箭头函数"><a href="#箭头函数" class="header-anchor">#</a> 箭头函数</h2> <div class="language- extra-class"><pre class="language-text"><code>()=&gt;{}
+
+声明一个函数
+let fn = function(){}
+
+let fn = ()=&gt;{}
+1.this是静态的，指向声明时所在作用域的this
+2.箭头函数 不能作为构造函数
+3.不能用arguments（用rest）
+
+箭头函数的省略
+let pow = n =&gt; n*n
+
+1.省略(),当形参有且只有一个
+2.省略{}和return,当代码体只有一条语句，且该语句的执行结果就是函数的返回值
+
+应用场景
+1.适用于与this无关的回调，定时器，数组方法的回调等
+2.不适合作为this有关的回调，事件回调，对象的方法
+
+ex.
+需求：返回偶数
+const arr = [1,3,5,6,8,9]
+const result = arr.filter(item =&gt; item%2 ===0)
+</code></pre></div><h2 id="es7"><a href="#es7" class="header-anchor">#</a> es7</h2> <div class="language- extra-class"><pre class="language-text"><code>Array.prototype.includes
+const arr = [1,3,4,5]
+arr.includes(3) //返回boolean
+
+指数运算符 ** 实现幂运算
+console.log(2 ** 10) 相当于 Math.pow(2,10)
+</code></pre></div><h2 id="函数参数"><a href="#函数参数" class="header-anchor">#</a> 函数参数</h2> <div class="language- extra-class"><pre class="language-text"><code>1.形参可以赋初始值,一般位置靠后(潜规则)
+//为什么靠后：因为如果放b的位置，有实参2个的话，第二个直接顶掉了，意义不大
+function add(a,b,c=10){
+  return a+b+c
+}
+add(1,2)
+add(1,2,3)
+
+2.与解构赋值结合
+function connect(options){
+  let host = options.host
+  let username = options.username
+}
+
+connect({
+  host:&quot;localhost&quot;,
+  username:&quot;root&quot;
+  password:&quot;root&quot;,
+  port:3306
+})
+
+---&gt;
+function connect({
+  host=&quot;127.0.0.1&quot;,
+  username,
+  password,
+  port:3306
+}){
+  //可以直接拿来用
+  console.log(host)
+  console.log(username)
+  console.log(password)
+  console.log(port)
+}
+connect({
+  host:&quot;localhost&quot;,
+  username:&quot;root&quot;
+  password:&quot;root&quot;,
+  port:3306
+})
+
+</code></pre></div><h2 id="rest-参数"><a href="#rest-参数" class="header-anchor">#</a> rest 参数</h2> <div class="language- extra-class"><pre class="language-text"><code>es5获取实参方式
+function date(){
+  console.log(arguments) //得到一个对象
+  }
+
+es6
+
+function date(...args){
+  console.log(args) //得到一个数组，可以用数组的API
+}
+
+date(&quot;阿娇&quot;,&quot;白纸&quot;,&quot;恩惠&quot;)
+
+//rest参数必须放到最后
+function fn(a,b,...args){
+  console.log(a)
+  console.log(b)
+  console.log(args)
+}
+
+fn(1,2,3,4,5,6) 
+// 1,2,[3,4,5,6]
+
+</code></pre></div><h2 id="扩展运算符"><a href="#扩展运算符" class="header-anchor">#</a> 扩展运算符</h2> <div class="language- extra-class"><pre class="language-text"><code>es6
+能够将数组转为逗号分隔的参数序列
+const tfboys = [&quot;易烊千玺&quot;,&quot;王俊凯&quot;,&quot;愿望&quot;]
+// =&gt; &quot;易烊千玺&quot;,&quot;王俊凯&quot;,&quot;愿望&quot;
+
+function fn(){
+  console.log(arguments)
+}
+fn(...tfboys) // fn(&quot;易烊千玺&quot;,&quot;王俊凯&quot;,&quot;愿望&quot;)
+
+es9 对象可使用拓展运算符
+function connect({
+  host,port,...uesr
+}){}
+
+connect({
+  host:&quot;127.0.0.1&quot;,
+  port: 3306,
+  username:&quot;root&quot;,
+  password:&quot;root&quot;,
+  type:&quot;master&quot;
+})
+
+//对象合并
+const skillOne={
+  q:&quot;拍地板&quot;
+}
+const skillTwo={
+  w:&quot;位移&quot;
+}
+
+const skill = {...skillOne,...skillTwo}
+
+//如果原先有name,则会替换
+let person3 = {...person,name:&quot;jack&quot;} 
+
+</code></pre></div><h2 id="symbol"><a href="#symbol" class="header-anchor">#</a> Symbol</h2> <div class="language- extra-class"><pre class="language-text"><code>新的数组类型：表独一无二的值
+//创建symbol
+//1. 调用Symbol创建
+let s = Symbol()
+//console.log(s,typeof s)
+let s2 = Symbol(&quot;小贾&quot;)
+let s3 = Symbol(&quot;小贾&quot;)
+// console.log(s2 === s3) //false
+
+//2.Symbol.for创建
+let s4 = Symbol.for(&quot;小贾&quot;)
+let s5 = Symbol.for(&quot;小贾&quot;)
+// console.log(s4 === s5) // true
+
+1.不能与其他数据进行运算
+let result = s + 100;
+
+</code></pre></div><h2 id="迭代器"><a href="#迭代器" class="header-anchor">#</a> 迭代器</h2> <div class="language- extra-class"><pre class="language-text"><code>迭代器
+	为不同数据结构提供统一的访问机制
+	任何数据结构，部署迭代器interator接口，就可以完成遍历操作
+  es6新的遍历命令for of,迭代器接口主要供for of消费
+  使用for of 遍历
+原生具备interator接口的数据
+	array arguments set map string typedarray nodelist
+
+js中的迭代器接口就是对象中的一个属性symbol.iterator
+
+
+  const arr1 = ['mao','maomao','maomaomao']
+  for (let v in arr1) {
+    console.log(v) // 0 1 2 键名
+  }
+  for (let x of arr1) {
+    console.log(x) // mao maomao maomaomao 键值
+  }
+
+迭代器应用-自定义遍历数据
+  const banji = {
+    name: 'class1',
+    stus: [
+      'mao',
+      'maomao',
+    ],
+    [Symbol.iterator](){ //当被for of遍历时调用
+      //4.什么索引遍历
+      let index = 0
+      let _this = this // banji
+      return { //1.返回一个指针对象
+        next: function () { //2.添加一个next方法
+          if (index &lt; _this.stus.length){
+            const result = {value: _this.stus[index], done: false} //3. next方法的返回值 是一个对象
+            index++
+            return result
+          }else {
+            return {value: undefined, done: true};
+          }
+        }
+      };
+    }
+  }
+  //需求：遍历这个对象，且返回stus这个数组中的value for in 返回的是key
+  //banji.stus.forEach() 这是遍历数组
+  //遍历这个对象
+  for (let s of banji){
+    console.log(s)
+  }
+
+生成器：是一个函数，解决异步编程
+</code></pre></div><h2 id="set"><a href="#set" class="header-anchor">#</a> Set</h2> <div class="language- extra-class"><pre class="language-text"><code>新的数据结构Set
+类似数组，但是成员值唯一，不能重复
+属性和方法
+.size
+add
+delete
+has
+clear 清空集合
+
+type是Object
+
+let s = new Set()
+let s2 = new Set([1,1,2,2,3])
+
+console.log(s2) // [1,2,3] 初始值是可迭代的话，会去重
+
+1. 数组去重
+
+2. 交集
+3. 并集
+4. 差集
+</code></pre></div><h2 id="map"><a href="#map" class="header-anchor">#</a> Map</h2> <div class="language- extra-class"><pre class="language-text"><code>新的数据结构,键值对形式
+但是key不局限于string
+方法和属性几乎同Set
+
+
+</code></pre></div><h2 id="class"><a href="#class" class="header-anchor">#</a> Class</h2> <div class="language- extra-class"><pre class="language-text"><code>es6的class只是一个语法糖，只是让对象原型的写法更清晰，更面向对象编程
+1. class声明类
+2. constructor
+3. extends
+4. super
+5. static
+6. 重写
+
+ex.
+
+class Phone{
+  constructor(brand,price){
+    this.brand = brand
+    this.price = price
+
+    //方法必须这么写
+    call(){}
+  }
+}
+
+let iphone6 = new Phone(&quot;Apple&quot;,80000)
+
+</code></pre></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/notebook/front/basic/javascript/basic/error.html" class="prev">
+          Error
+        </a></span> <span class="next"><a href="/notebook/front/basic/javascript/basic/summary.html">
+          Summary
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/javascript/basic/es6.html#import-and-export" class="sidebar-link reco-side-import-and-export" data-v-b57cc07c>import and export</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/javascript/basic/es6.html#promise" class="sidebar-link reco-side-promise" data-v-b57cc07c>Promise</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/javascript/basic/es6.html#解构赋值" class="sidebar-link reco-side-解构赋值" data-v-b57cc07c>解构赋值</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/javascript/basic/es6.html#模板字符串" class="sidebar-link reco-side-模板字符串" data-v-b57cc07c>模板字符串``</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/javascript/basic/es6.html#对象的简写" class="sidebar-link reco-side-对象的简写" data-v-b57cc07c>对象的简写</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/javascript/basic/es6.html#async-await" class="sidebar-link reco-side-async-await" data-v-b57cc07c>async await</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/javascript/basic/es6.html#类中的this" class="sidebar-link reco-side-类中的this" data-v-b57cc07c>类中的this</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/javascript/basic/es6.html#let-和-const" class="sidebar-link reco-side-let-和-const" data-v-b57cc07c>let 和 const</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/javascript/basic/es6.html#箭头函数" class="sidebar-link reco-side-箭头函数" data-v-b57cc07c>箭头函数</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/javascript/basic/es6.html#es7" class="sidebar-link reco-side-es7" data-v-b57cc07c>es7</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/javascript/basic/es6.html#函数参数" class="sidebar-link reco-side-函数参数" data-v-b57cc07c>函数参数</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/javascript/basic/es6.html#rest-参数" class="sidebar-link reco-side-rest-参数" data-v-b57cc07c>rest 参数</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/javascript/basic/es6.html#扩展运算符" class="sidebar-link reco-side-扩展运算符" data-v-b57cc07c>扩展运算符</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/javascript/basic/es6.html#symbol" class="sidebar-link reco-side-symbol" data-v-b57cc07c>Symbol</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/javascript/basic/es6.html#迭代器" class="sidebar-link reco-side-迭代器" data-v-b57cc07c>迭代器</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/javascript/basic/es6.html#set" class="sidebar-link reco-side-set" data-v-b57cc07c>Set</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/javascript/basic/es6.html#map" class="sidebar-link reco-side-map" data-v-b57cc07c>Map</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/basic/javascript/basic/es6.html#class" class="sidebar-link reco-side-class" data-v-b57cc07c>Class</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/notebook/assets/js/app.a4af80e3.js" defer></script><script src="/notebook/assets/js/3.cd0d221c.js" defer></script><script src="/notebook/assets/js/1.3b1cd4a9.js" defer></script><script src="/notebook/assets/js/29.6a90e826.js" defer></script>
+  </body>
+</html>

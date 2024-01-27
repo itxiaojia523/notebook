@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>hooks到底是什么呢 | 小贾的前端笔记</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="小贾的前端笔记">
+    
+    <link rel="preload" href="/notebook/assets/css/0.styles.583d0ac5.css" as="style"><link rel="preload" href="/notebook/assets/js/app.a4af80e3.js" as="script"><link rel="preload" href="/notebook/assets/js/3.cd0d221c.js" as="script"><link rel="preload" href="/notebook/assets/js/1.3b1cd4a9.js" as="script"><link rel="preload" href="/notebook/assets/js/67.23780005.js" as="script"><link rel="prefetch" href="/notebook/assets/js/10.52abbca9.js"><link rel="prefetch" href="/notebook/assets/js/11.5e7166c2.js"><link rel="prefetch" href="/notebook/assets/js/12.a53a7da1.js"><link rel="prefetch" href="/notebook/assets/js/13.d8f4f522.js"><link rel="prefetch" href="/notebook/assets/js/14.ce49760b.js"><link rel="prefetch" href="/notebook/assets/js/15.55318b2c.js"><link rel="prefetch" href="/notebook/assets/js/16.5b871032.js"><link rel="prefetch" href="/notebook/assets/js/17.f6a1bb99.js"><link rel="prefetch" href="/notebook/assets/js/18.072f3403.js"><link rel="prefetch" href="/notebook/assets/js/19.4ede7a5e.js"><link rel="prefetch" href="/notebook/assets/js/20.3fd3d766.js"><link rel="prefetch" href="/notebook/assets/js/21.b4bd38d9.js"><link rel="prefetch" href="/notebook/assets/js/22.d04a7528.js"><link rel="prefetch" href="/notebook/assets/js/23.e323cd05.js"><link rel="prefetch" href="/notebook/assets/js/24.e9873950.js"><link rel="prefetch" href="/notebook/assets/js/25.04cbafe3.js"><link rel="prefetch" href="/notebook/assets/js/26.2f2e24f7.js"><link rel="prefetch" href="/notebook/assets/js/27.3f379816.js"><link rel="prefetch" href="/notebook/assets/js/28.cbbc9fbc.js"><link rel="prefetch" href="/notebook/assets/js/29.6a90e826.js"><link rel="prefetch" href="/notebook/assets/js/30.3fc8936b.js"><link rel="prefetch" href="/notebook/assets/js/31.bd020d72.js"><link rel="prefetch" href="/notebook/assets/js/32.04519fc9.js"><link rel="prefetch" href="/notebook/assets/js/33.a49d79f7.js"><link rel="prefetch" href="/notebook/assets/js/34.f12beac4.js"><link rel="prefetch" href="/notebook/assets/js/35.b78d6e28.js"><link rel="prefetch" href="/notebook/assets/js/36.23fa6bfc.js"><link rel="prefetch" href="/notebook/assets/js/37.feddd8c3.js"><link rel="prefetch" href="/notebook/assets/js/38.5abe0093.js"><link rel="prefetch" href="/notebook/assets/js/39.d97da850.js"><link rel="prefetch" href="/notebook/assets/js/4.bd3236bb.js"><link rel="prefetch" href="/notebook/assets/js/40.1454a516.js"><link rel="prefetch" href="/notebook/assets/js/41.c58d9a95.js"><link rel="prefetch" href="/notebook/assets/js/42.d58ba369.js"><link rel="prefetch" href="/notebook/assets/js/43.e974402b.js"><link rel="prefetch" href="/notebook/assets/js/44.b0947cfa.js"><link rel="prefetch" href="/notebook/assets/js/45.ae019d13.js"><link rel="prefetch" href="/notebook/assets/js/46.c733bf95.js"><link rel="prefetch" href="/notebook/assets/js/47.c4daa0e2.js"><link rel="prefetch" href="/notebook/assets/js/48.f1e1b759.js"><link rel="prefetch" href="/notebook/assets/js/49.cb22050f.js"><link rel="prefetch" href="/notebook/assets/js/5.68d5ba89.js"><link rel="prefetch" href="/notebook/assets/js/50.d2a5cee4.js"><link rel="prefetch" href="/notebook/assets/js/51.db2cb444.js"><link rel="prefetch" href="/notebook/assets/js/52.1ee662ee.js"><link rel="prefetch" href="/notebook/assets/js/53.073dcc65.js"><link rel="prefetch" href="/notebook/assets/js/54.6bab7b7b.js"><link rel="prefetch" href="/notebook/assets/js/55.c95ed9b8.js"><link rel="prefetch" href="/notebook/assets/js/56.0a82a224.js"><link rel="prefetch" href="/notebook/assets/js/57.df77ef17.js"><link rel="prefetch" href="/notebook/assets/js/58.a24d90f5.js"><link rel="prefetch" href="/notebook/assets/js/59.73f3b6d7.js"><link rel="prefetch" href="/notebook/assets/js/6.a6f9ef00.js"><link rel="prefetch" href="/notebook/assets/js/60.ba1a8e7a.js"><link rel="prefetch" href="/notebook/assets/js/61.b56a3c90.js"><link rel="prefetch" href="/notebook/assets/js/62.76711a56.js"><link rel="prefetch" href="/notebook/assets/js/63.ffa04a7f.js"><link rel="prefetch" href="/notebook/assets/js/64.2c33c072.js"><link rel="prefetch" href="/notebook/assets/js/65.ae6dfb13.js"><link rel="prefetch" href="/notebook/assets/js/66.63e80af9.js"><link rel="prefetch" href="/notebook/assets/js/68.f1b4422f.js"><link rel="prefetch" href="/notebook/assets/js/69.19094eb3.js"><link rel="prefetch" href="/notebook/assets/js/7.6055b080.js"><link rel="prefetch" href="/notebook/assets/js/70.35b4e16d.js"><link rel="prefetch" href="/notebook/assets/js/71.1f8fd97e.js"><link rel="prefetch" href="/notebook/assets/js/72.cea694d2.js"><link rel="prefetch" href="/notebook/assets/js/73.5f7ce277.js"><link rel="prefetch" href="/notebook/assets/js/74.279ec00a.js"><link rel="prefetch" href="/notebook/assets/js/75.bddabbee.js"><link rel="prefetch" href="/notebook/assets/js/76.85adf61b.js"><link rel="prefetch" href="/notebook/assets/js/77.001a727c.js"><link rel="prefetch" href="/notebook/assets/js/78.0756fae8.js"><link rel="prefetch" href="/notebook/assets/js/79.e851573d.js"><link rel="prefetch" href="/notebook/assets/js/8.179b1ae3.js"><link rel="prefetch" href="/notebook/assets/js/80.b7ada7c9.js"><link rel="prefetch" href="/notebook/assets/js/81.793c4e62.js"><link rel="prefetch" href="/notebook/assets/js/82.ca7ebe8e.js"><link rel="prefetch" href="/notebook/assets/js/83.fe847cad.js"><link rel="prefetch" href="/notebook/assets/js/84.36739797.js"><link rel="prefetch" href="/notebook/assets/js/9.0238166d.js">
+    <link rel="stylesheet" href="/notebook/assets/css/0.styles.583d0ac5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>小贾的前端笔记</h3> <p class="description" data-v-59e6cb88>小贾的前端笔记</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/notebook/" class="home-link router-link-active"><!----> <span class="site-name">小贾的前端笔记</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/notebook/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      小贾的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/itxiaojia523" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/712139234359182/posts" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>46</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/notebook/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      小贾的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/itxiaojia523" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/712139234359182/posts" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/notebook/" class="sidebar-heading clickable router-link-active open"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/notebook/" aria-current="page" class="sidebar-link">学前必读</a></li><li><a href="/notebook/front/问题集.html" class="sidebar-link">问题集</a></li><li><a href="/notebook/front/面试题.html" class="sidebar-link">面试题</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/notebook/handbook/mynote" class="sidebar-heading clickable"><span>My Note</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/notebook/handbook/common/common" class="sidebar-heading clickable"><span>Common</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/notebook/front/front" class="sidebar-heading clickable"><span>前端学习</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/notebook/back/back" class="sidebar-heading clickable"><span>后端学习</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2024
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">hooks到底是什么呢</h1> <div data-v-8a445198><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h2 id="hooks到底是什么呢"><a href="#hooks到底是什么呢" class="header-anchor">#</a> hooks到底是什么呢</h2> <p>钩子编程（hooking) 是计算机程序设计术语, 通过拦截软件模块间的函数调用、消息传递、事件传递来修改或扩展操作系统、应用程序或其他软件组件的行为的各种技术。处理被拦截的函数调用、事件、消息的代码，被称为钩子（hook）。</p> <p>简单理解为：在特定的时机，执行的回调</p> <h2 id="react-hooks"><a href="#react-hooks" class="header-anchor">#</a> React Hooks</h2> <p>1.只能在React的<strong>函数组件FC</strong>中使用</p> <p>2.只能在<strong>函数最外层</strong>调用</p> <h2 id="usestate-initialstate"><a href="#usestate-initialstate" class="header-anchor">#</a> useState(initialState)</h2> <p>state概念参考: <a href="/notebook/front/react/core.html">core</a></p> <p>(1). State Hook让函数组件也可以有state状态, 并进行状态数据的读写操作</p> <div class="language- extra-class"><pre><code>注意事项
+1.useState 是一个 Hook，因此你只能在 组件的顶层 或自己的 Hook 中调用它。
+你不能在循环或条件语句中调用它。如果你需要这样做，请提取一个新组件并将状态移入其中。
+
+2.在严格模式中，React 将 两次调用初始化函数，以 帮你找到意外的不纯性。这只是开发时的行为，不影响生产。
+如果你的初始化函数是纯函数（本该是这样），就不应影响该行为。其中一个调用的结果将被忽略。
+</code></pre></div><p>(2). 语法:</p> <div class="language- extra-class"><pre class="language-text"><code>    const [xxx, setXxx] = React.useState(initialState)
+    const [xxx, setXxx] = useState&lt;dataType&gt;(initialState) //ts
+    使用 数组解构 来命名状态变量，例如 [something, setSomething]。
+
+    参数:
+    initialState 初始化的值。可以是任何类型，但对于函数有特殊的行为。在初始渲染后，此参数将被忽略。
+
+    ---
+    如是函数，应该是纯函数，不该接收任意参数，并且应该返回一个指
+    const [todos, setTodos] = useState(createInitialTodos);
+    注意：不要调用函数
+    仍然在每次渲染时调用此函数。如果它创建大数组或执行昂贵的计算，这可能会浪费资源。
+    const [todos, setTodos] = useState(createInitialTodos());
+    ---
+
+    返回值：返回一个由两个值组成的数组
+    1.当前的 state。在首次渲染时，它将与你传递的 initialState 相匹配。
+    2.set 函数，它可以让你将 state 更新为不同的值并触发重新渲染。
+
+    setXxx()2种写法:
+
+    //新值不依赖旧值计算
+    setXxx(newValue): 参数为非函数值, 直接指定新的状态值, 内部用其覆盖原来的状态值
+    //新值依赖旧值计算
+    setXxx(preState =&gt; newValue): 参数为函数, 接收preState, 返回新的state, 内部用其覆盖原来的状态值
+
+    setState
+    根据先前的 state 更新 state 
+    假设 age 为 42，这个处理函数三次调用 setAge(age + 1)：
+    function handleClick() {
+      setAge(age + 1); // setAge(42 + 1)
+      setAge(age + 1); // setAge(42 + 1)
+      setAge(age + 1); // setAge(42 + 1)
+    }
+    然而，点击一次后，age 将只会变为 43 而不是 45！
+    这是因为调用 set 函数 不会更新 已经运行代码中的 age 状态变量。因此，每个 setAge(age + 1) 调用变成了 setAge(43)。
+
+    为了解决这个问题，你可以向 setAge 传递一个 更新函数，而不是下一个状态：
+    function handleClick() {
+      setAge(a =&gt; a + 1); // setAge(42 =&gt; 43)
+      setAge(a =&gt; a + 1); // setAge(43 =&gt; 44)
+      setAge(a =&gt; a + 1); // setAge(44 =&gt; 45)
+    }
+
+    注意事项
+    1.set 函数 仅更新 下一次 渲染的状态变量。如果在调用 set 函数后读取状态变量，则 仍会得到在调用之前显示在屏幕上的旧值。
+    2.React 会 批量处理状态更新。它会在所有 事件处理函数运行 并调用其 set 函数后更新屏幕。这可以防止在单个事件期间多次重新渲染。在某些罕见情况下，你需要强制 React 更早地更新屏幕，例如访问 DOM，你可以使用 flushSync。
+
+    存储前一次渲染的信息
+
+    然而，在极少数情况下，你可能希望在响应渲染时调整状态——例如，当 props 改变时，你可能希望改变状态变量(在大多数情况下，你不需要这样做)。
+
+    如果你需要的值可以完全从当前 props 或其他 state 中计算出来，那么 完全可以移除那些多余的状态。如果你担心重新计算的频率过高，可以使用 useMemo Hook 来帮助优化。
+    如果你想重置整个组件树的状态，可以向组件传递一个不同的 key。
+    如果可以的话，在事件处理函数中更新所有相关状态。
+
+
+    是否总是优先使用更新函数
+    在大多数情况下，这两种方法没有区别。React 始终确保对于有意的用户操作，如单击，age 状态变量将在下一次单击之前被更新。这意味着单击事件处理函数在事件处理开始没有得到“过时” age 的风险。
+
+    但是，如果在同一事件中进行多个更新，则更新函数可能会有帮助。如果访问状态变量本身不方便（在优化重新渲染时可能会遇到这种情况），它们也很有用。
+
+    如果比起轻微的冗余你更喜欢语法的一致性，你正设置的状态又是根据先前的状态计算出来的，那么总是编写一个更新函数是合理的。如果它是从某个其他状态变量的先前状态计算出的，则你可能希望将它们结合成一个对象然后 使用 reducer。
+
+    更新状态中的对象和数组
+    // 🚩 不要像下面这样改变一个对象：
+    form.firstName = 'Taylor';
+
+    可以通过创建一个新对象来替换整个对象：
+    // ✅ 使用新对象替换 state
+    setForm({
+      ...form,
+      firstName: 'Taylor'
+    });
+
+    使用 key 重置状态 
+    在 渲染列表 时，你经常会遇到 key 属性。然而，它还有另外一个用途。
+
+    你可以 通过向组件传递不同的 key 来重置组件的状态。在这个例子中，重置按钮改变 version 状态变量，我们将它作为一个 key 传递给 Form 组件。当 key 改变时，React 会从头开始重新创建 Form 组件（以及它的所有子组件），所以它的状态被重置了。
+
+    export default function App() {
+      const [version, setVersion] = useState(0);
+
+      function handleReset() {
+        setVersion(version + 1);
+      }
+
+      return (
+        &lt;&gt;
+          &lt;button onClick={handleReset}&gt;Reset&lt;/button&gt;
+          &lt;Form key={version} /&gt;
+        &lt;/&gt;
+      );
+    }
+</code></pre></div><h2 id="useeffect"><a href="#useeffect" class="header-anchor">#</a> useEffect</h2> <p>(1). Effect Hook 可以让你在函数组件中执行副作用操作(用于模拟类组件中的生命周期钩子)</p> <p>(2). React中的副作用操作:
+        发ajax请求数据获取
+        设置订阅 / 启动定时器
+        手动更改真实DOM</p> <p>(3). 语法和说明:</p> <div class="language- extra-class"><pre class="language-text"><code>    1.空数组时，可以看作componentDidMount() 
+    useEffect(() =&gt; { 
+      // 在此可以执行任何带副作用操作
+    }, []) 
+
+    2.内部函数的return也是一个函数，可以看作componentWillUnmount() 
+    useEffect(() =&gt; { 
+      // 在此可以执行任何带副作用操作
+      return () =&gt; { // 在组件卸载前执行
+        // 在此做一些收尾工作, 比如清除定时器/取消订阅等
+      }
+    }, []) 
+
+    3.根据state值，当这些值发生更新时，才会执行componentDidUpdate()
+    useEffect(() =&gt; { 
+      // 在此可以执行任何带副作用操作
+    }, [stateValue]) 
+</code></pre></div><h2 id="uselayouteffect"><a href="#uselayouteffect" class="header-anchor">#</a> useLayoutEffect</h2> <p><strong>可能会影响性能。尽可能使用 useEffect。</strong></p> <div class="language- extra-class"><pre class="language-text"><code>  作用：在浏览器重新绘制屏幕前计算布局
+  注意：
+  1.Effect 只在客户端上运行，在服务端渲染中不会运行。
+  2.useLayoutEffect 内部的代码和所有计划的状态更新阻塞了浏览器重新绘制屏幕。如果过度使用，这会使你的应用程序变慢。如果可能的话，尽量选择 useEffect。
+
+  大多数组件只返回一些 JSX，然后浏览器计算他们的 布局（位置和大小）并重新绘制屏幕。
+  不需要依靠它们在屏幕上的位置和大小来决定渲染什么。
+
+  有时候，这还不够。想象一下悬停时出现在某个元素旁边的 tooltip。如果有足够的空间，tooltip 应该出现在元素的上方，但是如果不合适，它应该出现在下面。为了让 tooltip 渲染在最终正确的位置，你需要知道它的高度（即它是否适合放在顶部）。
+
+  要做到这一点，你需要分两步渲染：
+
+  1.将 tooltip 渲染到任何地方（即使位置不对）。
+  2.测量它的高度并决定放置 tooltip 的位置。
+  3.把 tooltip 渲染放在正确的位置。
+  所有这些都需要在浏览器重新绘制屏幕之前完成。你不希望用户看到 tooltip 在移动。调用 useLayoutEffect 在浏览器重新绘制屏幕之前执行布局测量：
+
+  function Tooltip() {
+  const ref = useRef(null);
+  const [tooltipHeight, setTooltipHeight] = useState(0); // 你还不知道真正的高度
+
+  useLayoutEffect(() =&gt; {
+    const { height } = ref.current.getBoundingClientRect();
+    setTooltipHeight(height); // 现在重新渲染，你知道了真实的高度
+  }, []);
+
+  // ... 在下方的渲染逻辑中使用 tooltipHeight ...
+
+  下面是这如何一步步工作的：
+
+  1.Tooltip 使用初始值 tooltipHeight = 0 进行渲染（因此 tooltip 可能被错误地放置）。
+  2.React 将它放在 DOM 中，然后运行 useLayoutEffect 中的代码。
+  3.useLayoutEffect 测量 了 tooltip 内容的高度，并立即触发重新渲染。
+  4.使用实际的 tooltipHeight 再次渲染 Tooltip（这样 tooltip 的位置就正确了）。
+  5.React 在 DOM 中对它进行更新，浏览器最终显示出 tooltip。
+
+
+  TooltipContainer.js
+  export default function TooltipContainer({ children, x, y, contentRef }) {
+  return (
+    &lt;div
+      style={{
+        position: 'absolute',
+        pointerEvents: 'none',
+        left: 0,
+        top: 0,
+        transform: `translate3d(${x}px, ${y}px, 0)`
+      }}
+    &gt;
+      &lt;div ref={contentRef} className=&quot;tooltip&quot;&gt;
+        {children}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+Tooltip.js
+import { useRef, useLayoutEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
+import TooltipContainer from './TooltipContainer.js';
+
+export default function Tooltip({ children, targetRect }) {
+  const ref = useRef(null);
+  const [tooltipHeight, setTooltipHeight] = useState(0);
+
+  useLayoutEffect(() =&gt; {
+    const { height } = ref.current.getBoundingClientRect();
+    setTooltipHeight(height);
+    console.log('Measured tooltip height: ' + height);
+  }, []);
+
+  let tooltipX = 0;
+  let tooltipY = 0;
+  if (targetRect !== null) {
+    tooltipX = targetRect.left;
+    tooltipY = targetRect.top - tooltipHeight;
+    if (tooltipY &lt; 0) {
+      // 它不适合上方，因此把它放在下面。
+      tooltipY = targetRect.bottom;
+    }
+  }
+
+  return createPortal(
+    &lt;TooltipContainer x={tooltipX} y={tooltipY} contentRef={ref}&gt;
+      {children}
+    &lt;/TooltipContainer&gt;,
+    document.body
+  );
+}
+
+ButtonWithTooltip.js
+import { useState, useRef } from 'react';
+import Tooltip from './Tooltip.js';
+
+export default function ButtonWithTooltip({ tooltipContent, ...rest }) {
+  const [targetRect, setTargetRect] = useState(null);
+  const buttonRef = useRef(null);
+  return (
+    &lt;&gt;
+      &lt;button
+        {...rest}
+        ref={buttonRef}
+        onPointerEnter={() =&gt; {
+          const rect = buttonRef.current.getBoundingClientRect();
+          setTargetRect({
+            left: rect.left,
+            top: rect.top,
+            right: rect.right,
+            bottom: rect.bottom,
+          });
+        }}
+        onPointerLeave={() =&gt; {
+          setTargetRect(null);
+        }}
+      /&gt;
+      {targetRect !== null &amp;&amp; (
+        &lt;Tooltip targetRect={targetRect}&gt;
+          {tooltipContent}
+        &lt;/Tooltip&gt;
+      )
+    }
+    &lt;/&gt;
+  );
+}
+
+App.js
+import ButtonWithTooltip from './ButtonWithTooltip.js';
+
+export default function App() {
+  return (
+    &lt;div&gt;
+      &lt;ButtonWithTooltip
+        tooltipContent={
+          &lt;div&gt;
+            This tooltip does not fit above the button.
+            &lt;br /&gt;
+            This is why it's displayed below instead!
+          &lt;/div&gt;
+        }
+      &gt;
+        Hover over me (tooltip above)
+      &lt;/ButtonWithTooltip&gt;
+      &lt;div style={{ height: 50 }} /&gt;
+      &lt;ButtonWithTooltip
+        tooltipContent={
+          &lt;div&gt;This tooltip fits above the button&lt;/div&gt;
+        }
+      &gt;
+        Hover over me (tooltip below)
+      &lt;/ButtonWithTooltip&gt;
+      &lt;div style={{ height: 50 }} /&gt;
+      &lt;ButtonWithTooltip
+        tooltipContent={
+          &lt;div&gt;This tooltip fits above the button&lt;/div&gt;
+        }
+      &gt;
+        Hover over me (tooltip below)
+      &lt;/ButtonWithTooltip&gt;
+    &lt;/div&gt;
+  );
+}
+
+
+
+}
+</code></pre></div><h2 id="useref"><a href="#useref" class="header-anchor">#</a> useRef</h2> <p>它能让你引用一个不需要渲染的值。</p> <p>组件更新，ref保持前值</p> <div class="language- extra-class"><pre class="language-text"><code>作用：
+获取dom节点，代替id
+清理计时器
+
+(1). Ref Hook可以在函数组件中存储/查找组件内的标签或任意其它数据
+(2). 语法: const refContainer = useRef()
+(3). 作用:保存标签对象,功能与React.createRef()一样
+(4). 类式组件可以看作DOM节点可以直接用ref  函数式不行
+
+给input加事件，想要input的数据，此时可以不用ref，直接通过event对象
+
+注意事项 
+你可以修改 ref.current 属性。与 state 不同，它是可变的。然而，如果它持有一个用于渲染的对象（例如，你的 state 的一部分），那么你就不应该修改这个对象。
+当你改变 ref.current 属性时，React 不会重新渲染你的组件。React 不知道你何时改变它，因为 ref 是一个普通的 JavaScript 对象。
+除了 初始化 外不要在渲染期间写入 或者读取 ref.current。这会使你的组件的行为不可预测。
+
+如何避免在初始化 useRef 之后进行 null 的类型检查
+
+function Video() {
+  const playerRef = useRef(null);
+
+  function getPlayer() {
+    if (playerRef.current !== null) {
+      return playerRef.current;
+    }
+    const player = new VideoPlayer();
+    playerRef.current = player;
+    return player;
+  }
+  }
+
+
+</code></pre></div><p>传递 ref 到你自己的组件</p> <div class="language- extra-class"><pre class="language-text"><code>const inputRef = useRef(null);
+return &lt;MyInput ref={inputRef} /&gt;;
+
+1. 找到你想获得 ref 的组件 将其包装在 forwardRef 里
+import { forwardRef } from 'react';
+
+const MyInput = forwardRef(({ value, onChange }, ref) =&gt; {
+  return (
+    &lt;input
+      value={value}
+      onChange={onChange}
+      ref={ref}
+    /&gt;
+  );
+});
+
+export default MyInput;
+
+</code></pre></div><h2 id="usememo"><a href="#usememo" class="header-anchor">#</a> useMemo</h2> <p>它在每次重新渲染的时候能够缓存计算的结果</p> <div class="language- extra-class"><pre class="language-text"><code>const cachedValue = useMemo(calculateValue, dependencies)
+calculateValue 要缓存计算值的函数
+React 将会在首次渲染时调用该函数；在之后的渲染中，如果 dependencies 没有发生变化，React 将直接返回相同值
+
+dependencies 响应式变量包括 props、state 和所有你直接在组件中定义的变量和函数
+</code></pre></div><p>用法 :跳过代价昂贵的重新计算</p> <div class="language- extra-class"><pre class="language-text"><code>如何衡量计算过程的开销是否昂贵？ 
+一般来说，除非要创建或循环遍历数千个对象，否则开销可能并不大。如果你想获得更详细的信息，可以在控制台来测量花费这上面的时间：
+console.time('filter array');
+const visibleTodos = filterTodos(todos, tab);
+console.timeEnd('filter array');
+如果全部记录的时间加起来很长（1ms 或者更多），那么记忆此计算结果是有意义的
+你的开发设备可能比用户的设备性能更强大，因此最好人为降低当前浏览器性能来测试
+
+
+
+</code></pre></div><p>何时使用</p> <div class="language- extra-class"><pre class="language-text"><code>如果你的应用程序类似于此站点，并且大多数交互都很粗糙（例如替换页面或整个章节），则通常不需要使用记忆化。反之，如果你的应用程序更像是绘图编辑器，并且大多数交互都是颗粒状的（如移动形状），那么你可能会发现记忆化非常有用。
+
+一些团队选择不考虑具体情况，尽可能多地使用 useMemo。不过这种做法会降低代码可读性。此外，并不是所有 useMemo 的使用都是有效的：一个“永远是新的”的单一值就足以破坏整个组件的记忆化效果
+
+
+在实践中，你可以通过遵循一些原则来避免 useMemo 的滥用：
+
+1.当一个组件在视觉上包裹其他组件时，让它 将 JSX 作为子组件传递。这样，当包装器组件更新自己的 state 时，React 知道它的子组件不需要重新渲染。
+2.首选本地 state，非必要不进行 状态提升。例如，不要保持像表单、组件是否悬停在组件树顶部这样的瞬时状态。
+3.保持你的 渲染逻辑纯粹。如果重新渲染组件会导致一些问题或产生一些明显的视觉错误，那么它就是组件中的错误！修复错误而不是使用记忆化。
+4.避免 不必要地更新 state 的 Effect。React 应用程序中的大多数性能问题都是由 Effect 创造的更新链引起的，这些更新链导致组件反复重新渲染。
+5.尽力 从 Effect 中移除不必要的依赖项。例如, 相比于记忆化，在 Effect 内部或组件外部移动某些对象或函数通常更简单。
+
+如果某个特定的交互仍然感觉滞后，使用 React 开发者工具分析器 查看哪些组件将从记忆化中获益最多，并在需要的地方添加记忆化。这些原则使你的组件更易于调试和理解，因此在任何情况下都应该遵循它们。从长远来看，我们正在研究 自动进行粒度记忆 以一劳永逸地解决这个问题。
+
+
+可以将 &lt;List /&gt; JSX 节点本身包裹在 useMemo 中，而不是将 List 包裹在 memo 中：
+export default function TodoList({ todos, tab, theme }) {
+  const visibleTodos = useMemo(() =&gt; filterTodos(todos, tab), [todos, tab]);
+  const children = useMemo(() =&gt; &lt;List items={visibleTodos} /&gt;, [visibleTodos]);
+  return (
+    &lt;div className={theme}&gt;
+      {children}
+    &lt;/div&gt;
+  );
+}
+</code></pre></div><h2 id="usecallback"><a href="#usecallback" class="header-anchor">#</a> useCallback</h2> <p>目的：<strong>避免无效更新</strong>；通常而言，如果父组件更新了，子组件也会执行更新；但是大多数场景下，更新是没有必要的</p> <p>使用
+当父给子传函数时
+搭配useMemo</p> <div class="language- extra-class"><pre class="language-text"><code>  const addItem = useCallback((value)=&gt;{
+  },[]) //[]里存放，当哪些数据更新时，这个函数也更新
+</code></pre></div><h2 id="usehistory"><a href="#usehistory" class="header-anchor">#</a> useHistory</h2> <p>注意：useNavigate代替了useHistory</p> <div class="language- extra-class"><pre class="language-text"><code>import { useLocation } from &quot;react-router-dom&quot;;
+let location = useLocation();
+const path = location.pathname
+
+// v5
+import { useHistory } from 'react-router-dom';
+
+function MyButton() {
+  let history = useHistory();
+  function handleClick() {
+    history.push('/home');
+  };
+  return &lt;button onClick={handleClick}&gt;Submit&lt;/button&gt;;
+};
+
+// v6
+import { useNavigate } from 'react-router-dom';
+
+function MyButton() {
+  let navigate = useNavigate();
+  function handleClick() {
+    navigate('/home');
+  };
+  return &lt;button onClick={handleClick}&gt;Submit&lt;/button&gt;;
+};
+history的用法也将被替换成：
+
+// v5
+history.push('/home');
+history.replace('/home');
+
+// v6
+navigate('/home');
+navigate('/home', {replace: true});
+
+//得到当前的路径
+let location = useLocation();
+let path = location.pathname
+
+JS路由跳转 useNavigate 代替 useHistory
+import { useNavigate } from 'react-router-dom';
+let navigate = useNavigate();
+// 跳转到后台，不需要回退
+	 navigate('/',{replace: true，state })
+navigate(-1) //回退 
+
+取state
+    const location = useLocation();
+	传过来的时候 state={product} 但是解构不出来 不是一个对象
+    const product = location.state
+ 
+</code></pre></div><h2 id="react-router-v6-新特性"><a href="#react-router-v6-新特性" class="header-anchor">#</a> React-Router v6 新特性</h2> <p>https://juejin.cn/post/7033313711947251743</p> <h2 id="路由"><a href="#路由" class="header-anchor">#</a> 路由</h2> <p>useReducer-useContext
+在某些场景下，useReducer 会比 useState 更适用，例如 state 逻辑较复杂且包含多个子值，或者下一个 state 依赖于之前的 state 等。并且，使用 useReducer 还能给那些会触发深更新的组件做性能优化，因为你可以向子组件传递 dispatch 而不是回调函数</p> <p>来自 <a href="https://zh-hans.reactjs.org/docs/hooks-reference.html#usereducer" target="_blank" rel="noopener noreferrer">https://zh-hans.reactjs.org/docs/hooks-reference.html#usereducer<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>const [state, dispatch] = useReducer(reducer, initialArg, init);</p> <p>来自 <a href="https://zh-hans.reactjs.org/docs/hooks-reference.html#usereducer" target="_blank" rel="noopener noreferrer">https://zh-hans.reactjs.org/docs/hooks-reference.html#usereducer<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="react实现拖拽"><a href="#react实现拖拽" class="header-anchor">#</a> react实现拖拽</h2> <p>npm install react-dnd react-dnd-html5-backend</p> <p>https://react-dnd.github.io/react-dnd/about</p></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/notebook/front/react/basic/redux.html" class="prev">
+          Redux
+        </a></span> <span class="next"><a href="/notebook/back/java/java.html">
+          Java
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/notebook/front/react/hooks.html#hooks到底是什么呢" class="sidebar-link reco-side-hooks到底是什么呢" data-v-b57cc07c>hooks到底是什么呢</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/react/hooks.html#react-hooks" class="sidebar-link reco-side-react-hooks" data-v-b57cc07c>React Hooks</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/react/hooks.html#usestate-initialstate" class="sidebar-link reco-side-usestate-initialstate" data-v-b57cc07c>useState(initialState)</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/react/hooks.html#useeffect" class="sidebar-link reco-side-useeffect" data-v-b57cc07c>useEffect</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/react/hooks.html#uselayouteffect" class="sidebar-link reco-side-uselayouteffect" data-v-b57cc07c>useLayoutEffect</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/react/hooks.html#useref" class="sidebar-link reco-side-useref" data-v-b57cc07c>useRef</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/react/hooks.html#usememo" class="sidebar-link reco-side-usememo" data-v-b57cc07c>useMemo</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/react/hooks.html#usecallback" class="sidebar-link reco-side-usecallback" data-v-b57cc07c>useCallback</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/react/hooks.html#usehistory" class="sidebar-link reco-side-usehistory" data-v-b57cc07c>useHistory</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/react/hooks.html#react-router-v6-新特性" class="sidebar-link reco-side-react-router-v6-新特性" data-v-b57cc07c>React-Router v6 新特性</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/react/hooks.html#路由" class="sidebar-link reco-side-路由" data-v-b57cc07c>路由</a></li><li class="level-2" data-v-b57cc07c><a href="/notebook/front/react/hooks.html#react实现拖拽" class="sidebar-link reco-side-react实现拖拽" data-v-b57cc07c>react实现拖拽</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/notebook/assets/js/app.a4af80e3.js" defer></script><script src="/notebook/assets/js/3.cd0d221c.js" defer></script><script src="/notebook/assets/js/1.3b1cd4a9.js" defer></script><script src="/notebook/assets/js/67.23780005.js" defer></script>
+  </body>
+</html>
